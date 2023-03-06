@@ -1,8 +1,6 @@
 # BUILD THE GAME
-    @ Complete the HTML shell
-        > Create the shell
-        > Get the page HTML metadata etc.
-        > Get the canvas configured properly, centered etc.
++Complete the HTML shell
+
     @ Complete the JS shells
         [Create Scenes]
             > Preload

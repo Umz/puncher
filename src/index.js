@@ -28,12 +28,34 @@ class MyGame extends Phaser.Scene
     }
 }
 
+//  Dimensions for this game:
+let CWIDTH = 640;
+let CHEIGHT = 320;
+
+const width = innerWidth;
+const height = innerHeight;
+const ratio = width / height;
+const newWidth = Math.ceil(CHEIGHT * ratio);
+CWIDTH = (ratio > 2) ? newWidth : CWIDTH;
+
 const config = {
     type: Phaser.AUTO,
-    parent: 'phaser-example',
-    width: 800,
-    height: 600,
-    scene: MyGame
+    pixelArt: false,
+    backgroundColor: '#000000',
+    scale: {
+        mode: Phaser.Scale.FIT,
+        autoCenter: Phaser.Scale.CENTER_BOTH,
+        width: CWIDTH,
+        height: CHEIGHT,
+        parent: 'phaser-game',
+    },
+    physics: {
+        default: 'arcade',
+        arcade: {debug: false}
+    },
+    scene: [
+        MyGame
+    ]
 };
 
 const game = new Phaser.Game(config);
