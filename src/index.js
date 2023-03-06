@@ -14,7 +14,7 @@ Value.WIDTH = (ratio > 2) ? newWidth : Value.WIDTH;
 
 const config = {
     type: Phaser.AUTO,
-    pixelArt: false,
+    pixelArt: true,
     backgroundColor: '#5d9ce8',
     scale: {
         mode: Phaser.Scale.FIT,

@@ -19,5 +19,6 @@ const Text = {
     SHEET_JSON: "allsheet.json",
 
     BG_CLOUD: "bg_cloud",
+    BG_STATUE: "bg_statue",
 }
 export default Text;

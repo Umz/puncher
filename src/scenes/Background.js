@@ -10,6 +10,12 @@ export default class Background extends Phaser.Scene {
     
     create () {
         
+        let x = Value.WIDTH / 2;
+        let y = Value.HEIGHT / 2;
+
+        let statue = this.add.image(x, y, Text.SHEET, Text.BG_STATUE);
+        statue.setScale(Value.HEIGHT / 15).setAlpha(.5);
+
         this.cloudTile = this.add.tileSprite(0, Value.HEIGHT, Value.WIDTH, Value.CLOUD_HEIGHT, Text.SHEET, Text.BG_CLOUD).setOrigin(0,1);
     }
 
