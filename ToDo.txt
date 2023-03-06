@@ -1,0 +1,101 @@
+# BUILD THE GAME
+    @ Complete the HTML shell
+        > Create the shell
+        > Get the page HTML metadata etc.
+        > Get the canvas configured properly, centered etc.
+    @ Complete the Gameplay First
+        [Background with Graphics]
+            - Background image 
+            - Clouds and smoke or mist
+            - Platforms in the Sky
+            - Wind effect
+            - Particles blowing in the wind (tree effect)
+        [Foreground]
+            - Platform to stand on (2D + 3)
+            - Characters
+        [Gameplay]
+            - Drop in characters
+            - Ready to play
+            - Playing
+            - Hit
+            - Result
+            - End of round
+        [FX]
+            - Spark for punch 
+            - Dripping rocks off platform 
+            - Onion skin
+            - Power Up before punch (FB collect effect)
+            - Number above puncher (HMTL)
+            - Flash on hit 
+            - Puff of mist on hit?
+        [Sounds]
+            - Heartbeat
+            - Wind effect for the BG Sound
+            - Punch (Getting hit)
+            - Bar filling up 
+            - Bar hit / select
+            - Scream (3+)
+            - Menu moving
+            - Menu selecting
+            - Menu close (back)
+            - Win Round
+            - Lose Round 
+            - Quit Game
+        [Data Storage]
+            - High score
+    @ Add the Menu and HUD/UI elements
+        [Main Menu]
+            - Game logo
+            - Menu items (HTML)
+                > Play Game 
+                > How to Play 
+                > Credits
+                > Exit
+        [Pause Menu]
+            - Quit Game
+                > Yes
+                > No
+        [HUD]
+            - Power Bar 
+            - Lives remaining
+            - Points on touch
+            - Round count
+            - Get Ready
+    @ Add loading, booting, transition screens
+        - Pre game loaded boot screen (UG Logo)
+    @ Add branding, polishing images and screens
+        - Add WebOS
+    @ Map buttons and customise for TV remote control
+        [Back button]
+    @ Add TV specific commands, back, etc.
+        [Back button]
+            - Exit the app
+# CREATE THE MARKETING
+    @ HTML page
+        [Meta]
+            - Favicon
+            - Page square icon
+    @ Screenshots
+        [Action Shots]
+            - Punching
+            - Falling
+    @ Game descriptions
+        - Text for the pqge (TV)
+        - Text for the video
+        - Text for tweet
+    @ 1 minute video
+        - Show hits
+        - Slow motion
+        - Round after round 
+        - Custom activity not in game 
+    @ 10-20 second ad shorts
+        - Ad message
+    @ Message
+        - Smart TV, WebOS focus
+# PUBLISH THE GAME
+    @ Put on TV
+    @ Create a dedicated website for 1 year (ug/name) > pointer site
+# MARKETING
+    @ Contacts
+    @ Tweets
+    @ Video
