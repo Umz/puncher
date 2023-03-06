@@ -1,13 +1,7 @@
 # BUILD THE GAME
 +Complete the HTML shell
++Complete the JS shells
 
-    @ Complete the JS shells
-        [Create Scenes]
-            > Preload
-            > Background
-            > Game
-            > Menu 
-            > Pause
     @ Complete the Gameplay First
         [Background with Graphics]
             - Background image 
