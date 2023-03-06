@@ -1,0 +1,41 @@
+{
+	"textures": [
+		{
+			"image": "allsheet.png",
+			"format": "RGBA8888",
+			"size": {
+				"w": 482,
+				"h": 231
+			},
+			"scale": 1,
+			"frames": [
+				{
+					"filename": "bg_clouds",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 480,
+						"h": 272
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 43,
+						"w": 480,
+						"h": 229
+					},
+					"frame": {
+						"x": 1,
+						"y": 1,
+						"w": 480,
+						"h": 229
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "3.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:877abd8d6ab35cbe7c6b1e7a65893fd2:c10bf10e102d7ab5768b44588b348ba4:52a8a3d5b75cc75f36711dd1c195e9a1$"
+	}
+}

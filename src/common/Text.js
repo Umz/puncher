@@ -1,4 +1,4 @@
-export default Text = {
+const Text = {
 
     // Scenes
 
@@ -8,4 +8,16 @@ export default Text = {
     MENU: "Menu",
     PAUSE: "Pause",
 
+    //  File Loading
+
+    ASSET_PATH: "./src/assets/",
+
+    //  Sprites
+
+    SHEET: "allsheet",
+    SHEET_PNG: "allsheet.png",
+    SHEET_JSON: "allsheet.json",
+
+    BG_CLOUD: "bg_cloud",
 }
+export default Text;

@@ -9,6 +9,8 @@ html, body {
     height: 100%;
 }
 body {
+    background-color: #5d9ce8;
+    background-image: linear-gradient(#5d9ce8 50%, #dbfbff 50%);
     font-family: 'Kanit', sans-serif;
     color: #000;
 }

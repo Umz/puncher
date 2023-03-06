@@ -4,25 +4,23 @@ import Background from './scenes/Background';
 import Game from './scenes/Game';
 import Menu from './scenes/Menu';
 import Pause from './scenes/Pause';
-
-let CWIDTH = 640;
-let CHEIGHT = 320;
+import Value from './common/Value';
 
 const width = innerWidth;
 const height = innerHeight;
 const ratio = width / height;
-const newWidth = Math.ceil(CHEIGHT * ratio);
-CWIDTH = (ratio > 2) ? newWidth : CWIDTH;
+const newWidth = Math.ceil(Value.HEIGHT * ratio);
+Value.WIDTH = (ratio > 2) ? newWidth : Value.WIDTH;
 
 const config = {
     type: Phaser.AUTO,
     pixelArt: false,
-    backgroundColor: '#000000',
+    backgroundColor: '#5d9ce8',
     scale: {
         mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
-        width: CWIDTH,
-        height: CHEIGHT,
+        width: Value.WIDTH,
+        height: Value.HEIGHT,
         parent: 'phaser-game',
     },
     physics: {

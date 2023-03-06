@@ -6,9 +6,7 @@
         [Background with Graphics]
             - Background image 
                 > Find cover image
-                > Scale across BG
             - Clouds and smoke or mist
-                > Full BG parallax
                 > Floating independent clouds 
                 > Clouds in/out alpha
             - Platforms in the Sky

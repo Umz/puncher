@@ -8,21 +8,11 @@ export default class Preload extends Phaser.Scene {
     }
     
     preload () {
-        this.load.setBaseURL('./src/assets/');
-        this.load.image('logo', 'logo.png');
+        this.load.setBaseURL(Text.ASSET_PATH);
+        this.load.atlas(Text.SHEET, Text.SHEET_PNG, Text.SHEET_JSON);
     }
     
     create () {
-
-        const logo = this.add.image(400, 150, 'logo');
-      
-        this.tweens.add({
-            targets: logo,
-            y: 450,
-            duration: 2000,
-            ease: "Power2",
-            yoyo: true,
-            loop: -1
-        });
+        this.scene.launch(Text.BACKGROUND);
     }
 }
