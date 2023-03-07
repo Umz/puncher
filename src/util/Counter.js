@@ -32,6 +32,10 @@ export default class Counter {
         return this;
     }
 
+    resetCount() {
+        this.counter = 0;
+    }
+
     isComplete() {
         return this.isRepeating ? this.isCountUpRepeat() : this.isCountUp();
     }

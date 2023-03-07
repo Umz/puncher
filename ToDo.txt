@@ -10,8 +10,6 @@
                 > Floating independent clouds 
                 > Clouds in/out alpha
         [Gameplay]
-            - Drop in characters
-            - Ready to play
             - Playing
             - Hit
             - Result
