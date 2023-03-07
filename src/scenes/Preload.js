@@ -1,5 +1,7 @@
 import Phaser from "phaser";
 import Text from "../common/Text";
+import AtlasImg from "../assets/allsheet.png";
+import AtlasJson from "../assets/allsheet.json";
 
 export default class Preload extends Phaser.Scene {
 
@@ -8,8 +10,7 @@ export default class Preload extends Phaser.Scene {
     }
     
     preload () {
-        this.load.setBaseURL(Text.ASSET_PATH);
-        this.load.atlas(Text.SHEET, Text.SHEET_PNG, Text.SHEET_JSON);
+        this.load.atlas(Text.SHEET, AtlasImg, AtlasJson);
     }
     
     create () {

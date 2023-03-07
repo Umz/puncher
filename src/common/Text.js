@@ -15,8 +15,6 @@ const Text = {
     //  Sprites
 
     SHEET: "allsheet",
-    SHEET_PNG: "allsheet.png",
-    SHEET_JSON: "allsheet.json",
 
     BG_CLOUD: "bg_clouds",
     BG_STATUE: "bg_statue",
