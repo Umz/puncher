@@ -94,6 +94,27 @@
 					}
 				},
 				{
+					"filename": "fx_hit",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 3,
+						"h": 3
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 3,
+						"h": 3
+					},
+					"frame": {
+						"x": 44,
+						"y": 249,
+						"w": 3,
+						"h": 3
+					}
+				},
+				{
 					"filename": "part_rock2",
 					"rotated": false,
 					"trimmed": false,
@@ -108,7 +129,7 @@
 						"h": 2
 					},
 					"frame": {
-						"x": 44,
+						"x": 49,
 						"y": 249,
 						"w": 4,
 						"h": 2
@@ -283,6 +304,27 @@
 					}
 				},
 				{
+					"filename": "fx_puff",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 14,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 14,
+						"h": 14
+					},
+					"frame": {
+						"x": 167,
+						"y": 231,
+						"w": 14,
+						"h": 14
+					}
+				},
+				{
 					"filename": "spr_tolu_jump3",
 					"rotated": false,
 					"trimmed": true,
@@ -297,7 +339,7 @@
 						"h": 14
 					},
 					"frame": {
-						"x": 167,
+						"x": 183,
 						"y": 231,
 						"w": 12,
 						"h": 14
@@ -309,6 +351,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:9c15300d9f644357acff271ff2e01cd6:4a8cbd61a5efb1645852595701dbf9bc:52a8a3d5b75cc75f36711dd1c195e9a1$"
+		"smartupdate": "$TexturePacker:SmartUpdate:f2aaa26a78f7a85dd8e14527c590a868:30234d067b9f7367bbb21f8f8a6f04e8:52a8a3d5b75cc75f36711dd1c195e9a1$"
 	}
 }

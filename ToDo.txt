@@ -9,14 +9,6 @@
             - Clouds and smoke or mist
                 > Floating independent clouds 
                 > Clouds in/out alpha
-        [FX]
-            - Spark for punch 
-            - Dripping rocks off platform 
-            - Onion skin
-            - Power Up before punch (FB collect effect)
-            - Number above puncher (HMTL)
-            - Flash on hit 
-            - Puff of mist on hit?
         [Sounds]
             - Heartbeat
             - Wind effect for the BG Sound
@@ -30,6 +22,8 @@
             - Win Round
             - Lose Round 
             - Quit Game
+        [Graphics]
+            - Add 7-13 sprites
         [Data Storage]
             - High score
     @ Add the Menu and HUD/UI elements

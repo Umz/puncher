@@ -40,6 +40,30 @@ const Emitter = {
             emitZone: { type: 'random', source: new Phaser.Geom.Rectangle(0, 0, Value.PLATFORM_WIDTH * 2, 8) },
             frequency: 1200
         }
+    },
+    HIT_RIGHT: {
+        atlas: Text.SHEET,
+        frame: Text.FX_SPARK,
+        depth: Value.DEPTH_FX_HIT,
+        emitterConfig: {
+            speedX: { min: Value.WIDTH * .4, max: Value.WIDTH * .6 },
+            speedY: { min: -96, max: 96 },
+            alpha: { start: 1, end: .5 },
+            lifespan: 750,
+            frequency: -1
+        }
+    },
+    HIT_LEFT: {
+        atlas: Text.SHEET,
+        frame: Text.FX_SPARK,
+        depth: Value.DEPTH_FX_HIT,
+        emitterConfig: {
+            speedX: { min: -Value.WIDTH * .4, max: -Value.WIDTH * .6 },
+            speedY: { min: -96, max: 96 },
+            alpha: { start: 1, end: .5 },
+            lifespan: 750,
+            frequency: -1
+        }
     }
 }
 export default Emitter;

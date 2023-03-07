@@ -18,5 +18,6 @@ const Value = {
     DEPTH_DUST_PARTICLE: 2,
     DEPTH_PLATFORM_PARTICLE: 2,
     DEPTH_PLATFORM: 4,
+    DEPTH_FX_HIT: 5,
 }
 export default Value;

@@ -22,6 +22,8 @@ const Text = {
     BG_ROCK2: "part_rock2",
 
     FG_PLATFORM: "fg_platform",
+    FX_SPARK: "fx_hit",
+    FX_PUFF: "fx_puff",
 
     TX_WIND: "wind-circle",
 
@@ -32,6 +34,9 @@ const Text = {
     EMIT_WIND: "wind-emitter",
     EMIT_DUST: "dust-emitter",
     EMIT_PLATFORM: "falling-rocks-emitter",
+
+    EMIT_HIT_RIGHT: "hit-fly-right",
+    EMIT_HIT_LEFT: "hit-fly-left",
 
     //  Events
 

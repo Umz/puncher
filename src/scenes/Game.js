@@ -26,6 +26,8 @@ export default class Game extends Phaser.Scene {
 
         let emitterFactory = new EmitterFactory(this);
         emitterFactory.createEmitter(Text.EMIT_PLATFORM, Emitter.PLATFORM);
+        emitterFactory.createEmitter(Text.EMIT_HIT_RIGHT, Emitter.HIT_RIGHT);
+        emitterFactory.createEmitter(Text.EMIT_HIT_LEFT, Emitter.HIT_LEFT);
 
         let platform = this.physics.add.sprite(x, y, Text.SHEET, Text.FG_PLATFORM);
         platform.setScale(2);
@@ -69,26 +71,38 @@ export default class Game extends Phaser.Scene {
 
         //  Battle Events
 
+        const shakeCam = this.scene.get(Text.BACKGROUND).cameras.main;
+        let emiiterR = emitterFactory.get(Text.EMIT_HIT_RIGHT);
+        let emiiterL = emitterFactory.get(Text.EMIT_HIT_LEFT);
+
         this.events.on(Text.EVENT_HIT, ()=>{
             this.playerHP --;
             player.defend(false);
             opponent.attack();
+            emiiterL.explode(70, opponent.getLeftCenter().x, opponent.getLeftCenter().y);
+            shakeCam.shake(100, .02, true);
             this.checkRoundOver();
         });
 
         this.events.on(Text.EVENT_ATTACK, (hit)=>{
             player.attack();
             opponent.defend(!hit)
-            if (hit)
+            if (hit) {
+                shakeCam.shake(100, .02, true);
+                emiiterR.explode(70, player.getRightCenter().x, player.getRightCenter().y);
                 this.opponentHP --;
+            }
             this.checkRoundOver();
         });
 
         this.events.on(Text.EVENT_DEFEND, (blocked)=>{
             player.defend(blocked);
             opponent.attack();
-            if (!blocked)
+            if (!blocked) {
+                shakeCam.shake(100, .02, true);
                 this.playerHP --;
+                emiiterL.explode(70, opponent.getLeftCenter().x, opponent.getLeftCenter().y);
+            }
             this.checkRoundOver();
         });
     }
