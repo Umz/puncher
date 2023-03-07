@@ -20,5 +20,11 @@ const Text = {
 
     BG_CLOUD: "bg_cloud",
     BG_STATUE: "bg_statue",
+
+    TX_WIND: "wind-circle",
+
+    //  Emitters
+
+    EMIT_WIND: "wind-emitter",
 }
 export default Text;
