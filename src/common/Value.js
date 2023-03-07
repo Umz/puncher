@@ -8,6 +8,7 @@ const Value = {
     //  File Sizes
 
     CLOUD_HEIGHT: 228,
+    PLATFORM_WIDTH: 32,
 
     //  DEPTHS
 
@@ -15,5 +16,7 @@ const Value = {
     DEPTH_CLOUD_TILE: 1,
     DEPTH_WIND_PARTICLE: 2,
     DEPTH_DUST_PARTICLE: 2,
+    DEPTH_PLATFORM_PARTICLE: 2,
+    DEPTH_PLATFORM: 4,
 }
 export default Value;

@@ -23,11 +23,16 @@ const Text = {
     BG_ROCK1: "part_rock1",
     BG_ROCK2: "part_rock2",
 
+    FG_PLATFORM: "fg_platform",
+
     TX_WIND: "wind-circle",
+
+    SPR_TOLU: "tolu",
 
     //  Emitters
 
     EMIT_WIND: "wind-emitter",
     EMIT_DUST: "dust-emitter",
+    EMIT_PLATFORM: "falling-rocks-emitter",
 }
 export default Text;

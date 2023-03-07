@@ -9,9 +9,6 @@
             - Clouds and smoke or mist
                 > Floating independent clouds 
                 > Clouds in/out alpha
-        [Foreground]
-            - Platform to stand on (2D + 3)
-            - Characters
         [Gameplay]
             - Drop in characters
             - Ready to play
