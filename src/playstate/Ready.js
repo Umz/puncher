@@ -15,6 +15,7 @@ export default class Ready extends Playstate {
     init() {
         //  Show the Get Ready on HUD
         this.showNotice();
+        this.scene.resetRound();
     }
 
     showNotice() {

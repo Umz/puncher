@@ -14,20 +14,27 @@ export default class Filling extends Playstate {
 
         this.lastButtons = [3, 3, 3];
         this.nextButton = 1;
-
-        scene.input.keyboard.on('keydown-RIGHT', (event) => {
-            this.buttonPress(RIGHT);
-        });
-        scene.input.keyboard.on('keydown-LEFT', (event) => {
-            this.buttonPress(LEFT);
-        });
     }
 
     init() {
+        
+        this.scene.input.keyboard.on('keydown-RIGHT', (event) => {
+            this.buttonPress(RIGHT);
+        });
+        this.scene.input.keyboard.on('keydown-LEFT', (event) => {
+            this.buttonPress(LEFT);
+        });
+
         this.responseTime = Math.max(this.responseTime - 100, 200);
         this.counter.setMaxCount(this.responseTime);
         this.lastButtons.length = 0;
         this.setNextButton();
+    }
+
+    reset() {
+        super.reset();
+        this.scene.input.keyboard.off('keydown-LEFT');
+        this.scene.input.keyboard.off('keydown-RIGHT');
     }
 
     update(time, delta) {

@@ -42,7 +42,6 @@ export default class Fighter extends Phaser.Physics.Arcade.Sprite {
         this.playAction(this.punchWinFrame);
     }
     
-
     defend(blocked) {
         let frame = blocked ? this.punchLoseFrame : this.hitFrame;
         this.playAction(frame);

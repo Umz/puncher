@@ -1,3 +1,4 @@
+import Text from "../common/Text";
 import Counter from "../util/Counter";
 
 export default class Playstate {
@@ -12,7 +13,7 @@ export default class Playstate {
     update(time, delta) {}
 
     nextState() {
-        // Fire off a Signal to inc the state
+        this.fireEvent(Text.EVENT_NEXT_STATE);
     }
 
     reset() {

@@ -9,8 +9,6 @@
             - Clouds and smoke or mist
                 > Floating independent clouds 
                 > Clouds in/out alpha
-        [Gameplay]
-            - End of round
         [FX]
             - Spark for punch 
             - Dripping rocks off platform 
