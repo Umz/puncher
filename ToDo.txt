@@ -6,8 +6,6 @@
         [Background with Graphics]
             - Platforms in the Sky
                 > BG platforms floating background 
-            - Particles blowing in the wind (tree effect)
-                > Particles appear and vanish in blocks
             - Clouds and smoke or mist
                 > Floating independent clouds 
                 > Clouds in/out alpha

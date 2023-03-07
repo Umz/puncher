@@ -20,6 +20,11 @@ export default class Background extends Phaser.Scene {
 
         let emitterFactory = new EmitterFactory(this);
         emitterFactory.createEmitter(Text.EMIT_WIND, Emitter.WIND);
+        emitterFactory.createEmitter(Text.EMIT_DUST, Emitter.DUST);
+
+        let de = emitterFactory.get(Text.EMIT_DUST);
+        
+        de.start();
 
         //  Cover image
 

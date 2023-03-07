@@ -4,8 +4,8 @@
 			"image": "allsheet.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 500,
-				"h": 230
+				"w": 482,
+				"h": 256
 			},
 			"scale": 1,
 			"frames": [
@@ -31,6 +31,27 @@
 					}
 				},
 				{
+					"filename": "fg_platform",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 32,
+						"h": 24
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 32,
+						"h": 24
+					},
+					"frame": {
+						"x": 1,
+						"y": 231,
+						"w": 32,
+						"h": 24
+					}
+				},
+				{
 					"filename": "bg_statue",
 					"rotated": false,
 					"trimmed": false,
@@ -45,10 +66,52 @@
 						"h": 15
 					},
 					"frame": {
-						"x": 483,
-						"y": 1,
+						"x": 35,
+						"y": 231,
 						"w": 16,
 						"h": 15
+					}
+				},
+				{
+					"filename": "part_rock1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 7,
+						"h": 4
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 7,
+						"h": 4
+					},
+					"frame": {
+						"x": 35,
+						"y": 248,
+						"w": 7,
+						"h": 4
+					}
+				},
+				{
+					"filename": "part_rock2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 4,
+						"h": 2
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 4,
+						"h": 2
+					},
+					"frame": {
+						"x": 44,
+						"y": 248,
+						"w": 4,
+						"h": 2
 					}
 				}
 			]
@@ -57,6 +120,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:c7ce5f0999d0d752b02a58db8fba6518:8ea245d1684a9e25d18d1e839a497407:52a8a3d5b75cc75f36711dd1c195e9a1$"
+		"smartupdate": "$TexturePacker:SmartUpdate:dc38cd8f78f813e5228771e62e5c3790:89a41ee5a832faae158b9cb5a23158a3:52a8a3d5b75cc75f36711dd1c195e9a1$"
 	}
 }

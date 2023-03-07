@@ -14,5 +14,6 @@ const Value = {
     DEPTH_COVER_BG: 1,
     DEPTH_CLOUD_TILE: 1,
     DEPTH_WIND_PARTICLE: 2,
+    DEPTH_DUST_PARTICLE: 2,
 }
 export default Value;
