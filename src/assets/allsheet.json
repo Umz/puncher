@@ -52,24 +52,24 @@
 					}
 				},
 				{
-					"filename": "bg_statue",
+					"filename": "spr_tolu_attack1",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
-						"w": 16,
-						"h": 15
+						"w": 13,
+						"h": 16
 					},
 					"spriteSourceSize": {
 						"x": 0,
 						"y": 0,
-						"w": 16,
-						"h": 15
+						"w": 13,
+						"h": 16
 					},
 					"frame": {
 						"x": 35,
 						"y": 231,
-						"w": 16,
-						"h": 15
+						"w": 13,
+						"h": 16
 					}
 				},
 				{
@@ -88,7 +88,7 @@
 					},
 					"frame": {
 						"x": 35,
-						"y": 248,
+						"y": 249,
 						"w": 7,
 						"h": 4
 					}
@@ -109,9 +109,198 @@
 					},
 					"frame": {
 						"x": 44,
-						"y": 248,
+						"y": 249,
 						"w": 4,
 						"h": 2
+					}
+				},
+				{
+					"filename": "spr_tolu_attack2",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 13,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 13,
+						"h": 16
+					},
+					"frame": {
+						"x": 50,
+						"y": 231,
+						"w": 13,
+						"h": 16
+					}
+				},
+				{
+					"filename": "spr_tolu_attack3",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 13,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 13,
+						"h": 16
+					},
+					"frame": {
+						"x": 65,
+						"y": 231,
+						"w": 13,
+						"h": 16
+					}
+				},
+				{
+					"filename": "spr_tolu_idle1",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 13,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 12,
+						"h": 16
+					},
+					"frame": {
+						"x": 80,
+						"y": 231,
+						"w": 12,
+						"h": 16
+					}
+				},
+				{
+					"filename": "spr_tolu_idle2",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 13,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 12,
+						"h": 16
+					},
+					"frame": {
+						"x": 94,
+						"y": 231,
+						"w": 12,
+						"h": 16
+					}
+				},
+				{
+					"filename": "spr_tolu_idle3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 13,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 12,
+						"h": 16
+					},
+					"frame": {
+						"x": 108,
+						"y": 231,
+						"w": 12,
+						"h": 16
+					}
+				},
+				{
+					"filename": "spr_tolu_idle4",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 13,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 12,
+						"h": 16
+					},
+					"frame": {
+						"x": 122,
+						"y": 231,
+						"w": 12,
+						"h": 16
+					}
+				},
+				{
+					"filename": "spr_blocky_idle1",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 11,
+						"h": 16
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 11,
+						"h": 16
+					},
+					"frame": {
+						"x": 136,
+						"y": 231,
+						"w": 11,
+						"h": 16
+					}
+				},
+				{
+					"filename": "bg_statue",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 16,
+						"h": 15
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 16,
+						"h": 15
+					},
+					"frame": {
+						"x": 149,
+						"y": 231,
+						"w": 16,
+						"h": 15
+					}
+				},
+				{
+					"filename": "spr_tolu_jump3",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 13,
+						"h": 14
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 12,
+						"h": 14
+					},
+					"frame": {
+						"x": 167,
+						"y": 231,
+						"w": 12,
+						"h": 14
 					}
 				}
 			]
@@ -120,6 +309,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:dc38cd8f78f813e5228771e62e5c3790:89a41ee5a832faae158b9cb5a23158a3:52a8a3d5b75cc75f36711dd1c195e9a1$"
+		"smartupdate": "$TexturePacker:SmartUpdate:9c15300d9f644357acff271ff2e01cd6:4a8cbd61a5efb1645852595701dbf9bc:52a8a3d5b75cc75f36711dd1c195e9a1$"
 	}
 }
