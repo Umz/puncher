@@ -6,13 +6,11 @@
         [Background with Graphics]
             - Platforms in the Sky
                 > BG platforms floating background 
+            - Particles blowing in the wind (tree effect)
+                > Particles appear and vanish in blocks
             - Clouds and smoke or mist
                 > Floating independent clouds 
                 > Clouds in/out alpha
-            - Wind effect
-                > Wind particles flying across the screen
-            - Particles blowing in the wind (tree effect)
-                > Particles appear and vanish in blocks
         [Foreground]
             - Platform to stand on (2D + 3)
             - Characters
@@ -54,6 +52,9 @@
                 > How to Play 
                 > Credits
                 > Exit
+        [Credits]
+
+            Platformer Tileset: By Zack Alvarado [https://opengameart.org/content/platformer-tilesets]
         [Pause Menu]
             - Quit Game
                 > Yes

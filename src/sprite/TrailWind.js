@@ -18,7 +18,7 @@ export default class TrailWind extends Phaser.Physics.Arcade.Sprite {
         if (this.counter.updateAndCheck(time, delta)) {
             let mul = Math.random() > .5 ? 1 : -1;
             this.setVelocityY((windSpeed * .15) * mul);
-            this.setRandomPosition(0, 0, Value.WIDTH, Value.HEIGHT);
+            this.setRandomPosition(0, 0, Value.WIDTH, Value.HEIGHT * .5);
         }
     }
     
