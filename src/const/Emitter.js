@@ -27,6 +27,19 @@ const Emitter = {
             emitZone: { type: 'random', source: new Phaser.Geom.Rectangle(0, 0, Value.WIDTH, Value.HEIGHT) },
             frequency: 500
         }
+    },
+    PLATFORM: {
+        atlas: Text.SHEET,
+        frame: Text.BG_ROCK1,
+        //frame: { frames: [ Text.BG_ROCK1, Text.BG_ROCK2 ] },
+        depth: Value.DEPTH_PLATFORM_PARTICLE,
+        emitterConfig: {
+            speedY: { min: 1, max: 12 },
+            gravityY: 120,
+            lifespan: 2500,
+            emitZone: { type: 'random', source: new Phaser.Geom.Rectangle(0, 0, Value.PLATFORM_WIDTH * 2, 8) },
+            frequency: 1200
+        }
     }
 }
 export default Emitter;
