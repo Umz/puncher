@@ -16,15 +16,41 @@ export default class Fighter extends Phaser.Physics.Arcade.Sprite {
     playIdle() {
         this.anims.play(this.prefix);
     }
-    
-    punchAttack(isWin) {
+
+    playAction(frame) {
+        
         this.anims.stop();
-        this.setFrame(isWin ? this.punchWinFrame : this.hitFrame);
+        this.setFrame(frame);
 
-        let dir = (this.flipX) ? -8 : 8;
-        this.x = this.startX + dir;
+        let tl = this.scene.tweens.createTimeline();
+        tl.add({
+            targets: this,
+            duration: 100,
+            x: this.toX,
+        });
+        tl.add({
+            targets: this,
+            duration: 100,
+            x: this.startX,
+            onComplete: ()=>{
+                this.setFrame(this.punchReadyFrame)
+            }
+        });
+        tl.play();
+    }
 
-        if (!isWin)
+    // motion - visual
+    // frame, move, wait, back, idle
+
+    attack() {
+        this.playAction(this.punchWinFrame);
+    }
+    
+
+    defend(blocked) {
+        let frame = blocked ? this.punchLoseFrame : this.hitFrame;
+        this.playAction(frame);
+        if (!blocked)
             this.flash(0xCCCCCC, 150);
     }
 
@@ -61,4 +87,5 @@ export default class Fighter extends Phaser.Physics.Arcade.Sprite {
     get punchLoseFrame() { return `spr_${this.prefix}_attack2`; }
     get punchWinFrame() { return `spr_${this.prefix}_attack3`; }
     get hitFrame() { return `spr_${this.prefix}_jump3`; }
+    get toX() { return this.startX + (this.flipX ? - 8 : 8) }
 }

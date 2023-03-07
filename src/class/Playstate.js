@@ -18,4 +18,8 @@ export default class Playstate {
     reset() {
         this.counter.resetCount();
     }
+
+    fireEvent(eventName, data) {
+        this.scene.events.emit(eventName, data);
+    }
 }

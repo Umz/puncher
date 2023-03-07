@@ -32,5 +32,12 @@ const Text = {
     EMIT_WIND: "wind-emitter",
     EMIT_DUST: "dust-emitter",
     EMIT_PLATFORM: "falling-rocks-emitter",
+
+    //  Events
+
+    EVENT_NEXT_STATE: "game-flow-next-state",
+    EVENT_ATTACK: "player-attack",
+    EVENT_DEFEND: "player-defend",
+    EVENT_HIT: "player-hit"
 }
 export default Text;

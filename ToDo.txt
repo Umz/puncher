@@ -10,9 +10,6 @@
                 > Floating independent clouds 
                 > Clouds in/out alpha
         [Gameplay]
-            - Playing
-            - Hit
-            - Result
             - End of round
         [FX]
             - Spark for punch 
