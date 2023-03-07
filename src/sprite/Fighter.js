@@ -1,12 +1,11 @@
 import Text from '../common/Text';
-import Value from '../common/Value';
-import Counter from '../util/Counter';
 
 export default class Fighter extends Phaser.Physics.Arcade.Sprite {
 
     constructor(scene, x, y, atlas, prefix) {
         super(scene, x, y, atlas, `spr_${prefix}_idle1`);
-        this.setScale(2)
+        
+        this.setScale(2);
         this.setOrigin(.5, 1);
 
         this.prefix = prefix;
@@ -38,9 +37,6 @@ export default class Fighter extends Phaser.Physics.Arcade.Sprite {
         });
         tl.play();
     }
-
-    // motion - visual
-    // frame, move, wait, back, idle
 
     attack() {
         this.playAction(this.punchWinFrame);
