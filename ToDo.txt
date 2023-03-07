@@ -3,7 +3,7 @@
 +Complete the JS shells
 
     @ Complete the Gameplay First
-        [Background with Graphics]
+        [Background with Graphics] (DEFER)
             - Platforms in the Sky
                 > BG platforms floating background 
             - Clouds and smoke or mist
