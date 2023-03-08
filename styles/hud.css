@@ -1,0 +1,18 @@
+#hud-container {
+    z-index: 7;
+}
+
+/* Arrows */
+#hud-arrows {
+    width: 70px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 25%;
+}
+#hud-arrow-left {
+    display: none;
+}
+#hud-arrow-right {
+    display: none;
+}

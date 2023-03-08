@@ -136,6 +136,9 @@ export default class Game extends Phaser.Scene {
         
             this.events.emit(Text.EVENT_NEXT_STATE);
         }
+        else {
+            this.state.setNextButton();
+        }
     }
 
     resetRound() {
@@ -148,7 +151,7 @@ export default class Game extends Phaser.Scene {
         
         if (this.p2.alpha === 0) {
             // Choose a new Sprite
-            //  Set
+            // Set
             this.tweenInSprite(this.p2);
         }
     }

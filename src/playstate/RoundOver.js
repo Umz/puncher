@@ -1,5 +1,6 @@
 import Playstate from "../class/Playstate";
 import Text from "../common/Text";
+import Dom from "../util/Dom";
 
 export default class Ready extends Playstate {
 
@@ -18,7 +19,6 @@ export default class Ready extends Playstate {
 
         //  Choose another opponent option on Menu
         this.showNotice();
-        console.log('Round Over init()')
     }
 
     reset() {

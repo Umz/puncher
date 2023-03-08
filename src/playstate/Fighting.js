@@ -1,5 +1,6 @@
 import Playstate from "../class/Playstate";
 import Text from "../common/Text";
+import Dom from "../util/Dom";
 
 const LEFT = 1;
 const RIGHT = 2;
@@ -40,7 +41,6 @@ export default class Filling extends Playstate {
     update(time, delta) {
         if (this.counter.updateAndCheck(time, delta)) {
             this.fireEvent(Text.EVENT_HIT);
-            this.setNextButton();
         }
     }
 
@@ -61,17 +61,26 @@ export default class Filling extends Playstate {
             this.lastButtons[2] = this.nextButton;
         }
         
-        let todo = (this.nextButton === LEFT) ? 'PRESS LEFT' : 'PRESS RIGHT';
-        //console.log(todo);
+        let id = (this.nextButton === LEFT) ? Text.HUD_ARROW_LEFT : Text.HUD_ARROW_RIGHT;
+        showArrow(id);
     }
 
     buttonPress(val) {
+        hideArrows();
 
         let correctPress = val === this.nextButton;
         let event = (this.nextButton === LEFT) ? Text.EVENT_DEFEND : Text.EVENT_ATTACK;
         this.fireEvent(event, correctPress);
-
-        this.setNextButton();
+        
         this.counter.resetCount();
     }
+}
+
+function showArrow(id) {
+    Dom.SetDisplayBlock(id);
+}
+
+function hideArrows() {
+    Dom.SetDisplayNone(Text.HUD_ARROW_LEFT);
+    Dom.SetDisplayNone(Text.HUD_ARROW_RIGHT);
 }

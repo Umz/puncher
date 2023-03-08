@@ -6,6 +6,7 @@ const Text = {
     DOM_MENU: "menu-container",
     DOM_HOW: "how-container",
     DOM_CREDITS: "credits-container",
+    DOM_HUD: "hud-container",
 
     MENU_SELECTED: "menu-active",
     MENU_ITEMS: "menu-item",
@@ -15,6 +16,9 @@ const Text = {
     MENU_HOW: "menu-how",
     MENU_CREDITS: "menu-credits",
     MENU_EXIT: "menu-exit",
+
+    HUD_ARROW_LEFT: "hud-arrow-left",
+    HUD_ARROW_RIGHT: "hud-arrow-right",
 
     //  Scenes
 

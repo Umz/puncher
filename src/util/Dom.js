@@ -42,9 +42,22 @@ export default class Dom {
         setVisibilityOnClass(className, 'hidden');
     }
 
+    static SetDisplayBlock(id) {
+        setDisplayOnElementWithId(id, 'block');
+    }
+
+    static SetDisplayNone(id) {
+        setDisplayOnElementWithId(id, 'none');
+    }
+
     static SetText(id, text) {
         setTextContentOnElementWithId(id, text);
     }
+}
+
+function setDisplayOnElementWithId(id, value) {
+    let element = document.getElementById(id);
+    element.style.display = value;
 }
 
 function setVisibilityOnClass(className, value) {
