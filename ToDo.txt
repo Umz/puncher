@@ -31,17 +31,10 @@
         [Data Storage]
             - High score
     @ Add the Menu and HUD/UI elements
-        [Pause Menu]
-        [Round Menu]
-            - Quit Game
-            - Try Again
-            - Next Round
-                > Yes
-                > No
         [HUD]
+            - Left or Right
             - Power Bar 
-            - Lives remaining
-            - Points on touch
+            - Points on touch (Hit, Block)
             - Round count
             - Get Ready
     @ Add loading, booting, transition screens
