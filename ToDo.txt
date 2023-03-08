@@ -31,9 +31,7 @@
             - High score
     @ Add the Menu and HUD/UI elements
         [Main Menu]
-            - Game logo
             - Menu items (HTML)
-                > Play Game 
                 > How to Play 
                 > Credits
                 > Exit
