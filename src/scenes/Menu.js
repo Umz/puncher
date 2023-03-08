@@ -122,7 +122,7 @@ function showPopup(id) {
 }
 
 function hidePopups() {
-    Dom.setClassHidden(Text.MENU_POPUP);
+    Dom.SetClassHidden(Text.MENU_POPUP);
 }
 
 function hideMenu() {
