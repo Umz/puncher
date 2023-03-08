@@ -28,16 +28,22 @@ export default class Menu extends Phaser.Scene {
 
         Dom.AddClick(Text.MENU_HOW, ()=>{
             setMenuItemSelected(Text.MENU_HOW);
-            console.log('Clicked How') 
+            showPopup(Text.DOM_HOW);
         });
 
         Dom.AddClick(Text.MENU_CREDITS, ()=>{
             setMenuItemSelected(Text.MENU_CREDITS);
-            console.log('Clicked Credits')
+            showPopup(Text.DOM_CREDITS);
         });
         Dom.AddClick(Text.MENU_EXIT, ()=>{
             setMenuItemSelected(Text.MENU_EXIT);
-            console.log('Clicked Exit')
+        });
+
+        Dom.AddClick(Text.DOM_HOW, ()=>{
+            hidePopups();
+        });
+        Dom.AddClick(Text.DOM_CREDITS, ()=>{
+            hidePopups();
         });
     }
     
@@ -81,6 +87,8 @@ function moveMenuSelected(dir = 1) {
     let next = activeElement.nextElementSibling || activeElement.parentElement.firstElementChild;
     let nextElement = (dir > 0) ? next : prev;
     Dom.AddClass(nextElement, Text.MENU_SELECTED);
+
+    hidePopups();
 }
 
 function selectedMenuItemAcion() {
@@ -100,12 +108,21 @@ function setMenuItemSelected(id) {
 
 function resetMenu() {
     Dom.ResetClickOnClass(Text.MENU_ITEMS);
+    Dom.ResetClickOnClass(Text.MENU_POPUP);
     
     let activeElement = Dom.GetFirstFromClass(Text.MENU_SELECTED);
     Dom.RemoveClass(activeElement, Text.MENU_SELECTED);
 
     let firstElement = Dom.GetFirstFromClass(Text.MENU_ITEMS);
     Dom.AddClass(firstElement, Text.MENU_SELECTED);
+}
+
+function showPopup(id) {
+    Dom.SetVisible(id);
+}
+
+function hidePopups() {
+    Dom.setClassHidden(Text.MENU_POPUP);
 }
 
 function hideMenu() {

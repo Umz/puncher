@@ -33,9 +33,20 @@ export default class Dom {
     static SetHidden(id) {
         setVisibilityOnElementWithId(id, 'hidden');
     }
+
+    static setClassVisible(className) {
+        setVisibilityOnClass(className, 'visible');
+    }
+
+    static setClassHidden(className) {
+        setVisibilityOnClass(className, 'hidden');
+    }
 }
 
-function setDisplayOnElementWithId(id) {
+function setVisibilityOnClass(className, value) {
+    let arr = getClassElements(className);
+        for (let element of arr)
+            element.style.visibility = value;
 }
 
 function setVisibilityOnElementWithId(id, value) {

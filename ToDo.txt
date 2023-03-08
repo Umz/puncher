@@ -10,6 +10,7 @@
                 > Floating independent clouds 
                 > Clouds in/out alpha
             [FX] Warp in
+            [Menu] Exit
         [Sounds]
             - Heartbeat
             - Wind effect for the BG Sound
@@ -30,14 +31,6 @@
         [Data Storage]
             - High score
     @ Add the Menu and HUD/UI elements
-        [Main Menu]
-            - Menu items (HTML)
-                > How to Play 
-                > Credits
-                > Exit
-        [Credits]
-
-            Platformer Tileset: By Zack Alvarado [https://opengameart.org/content/platformer-tilesets]
         [Pause Menu]
             - Quit Game
                 > Yes

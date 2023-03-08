@@ -4,9 +4,12 @@ const Text = {
 
     DOM_LOGO: "logo-container",
     DOM_MENU: "menu-container",
+    DOM_HOW: "how-container",
+    DOM_CREDITS: "credits-container",
 
     MENU_SELECTED: "menu-active",
     MENU_ITEMS: "menu-item",
+    MENU_POPUP: "popup-menu",
 
     MENU_PLAY: "menu-play",
     MENU_HOW: "menu-how",

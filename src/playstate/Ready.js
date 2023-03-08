@@ -4,7 +4,7 @@ export default class Ready extends Playstate {
 
     constructor(scene) {
         super(scene);
-        this.counter.setMaxCount(3000);
+        this.counter.setMaxCount(500);
     }
 
     update(time, delta) {
