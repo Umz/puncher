@@ -73,7 +73,6 @@
     visibility: hidden;
 }
 
-
 /* Credits */
 #credits-container {
     z-index: 8;
@@ -88,4 +87,33 @@
 #credits-holder #credits-specific {
     font-size: calc(.3em + 1vmin);
     color: #000;
+}
+
+/* Choice Selection */
+#select-container {
+    z-index: 8;
+    visibility: hidden;
+}
+#select-holder {
+    
+    max-width: 80%;
+    margin: auto;
+    padding: 15% 0;
+    text-align: center;
+
+    font-family: 'Gajraj One', cursive;
+    font-size: calc(1.5em + 1vmin);
+    text-shadow: 0px 2px 2px #000;
+    line-height: 150%;
+    color: #3d1a23;
+}
+
+#select-choices {
+    margin: 30% auto;
+    width: 250px;
+}
+.choice-active {
+    border-top: 2px solid #3d1a23;
+    border-bottom: 2px solid #3d1a23;
+    background-color: #ffffff;
 }

@@ -32,7 +32,10 @@
             - High score
     @ Add the Menu and HUD/UI elements
         [Pause Menu]
+        [Round Menu]
             - Quit Game
+            - Try Again
+            - Next Round
                 > Yes
                 > No
         [HUD]

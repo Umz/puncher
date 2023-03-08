@@ -34,12 +34,16 @@ export default class Dom {
         setVisibilityOnElementWithId(id, 'hidden');
     }
 
-    static setClassVisible(className) {
+    static SetClassVisible(className) {
         setVisibilityOnClass(className, 'visible');
     }
 
-    static setClassHidden(className) {
+    static SetClassHidden(className) {
         setVisibilityOnClass(className, 'hidden');
+    }
+
+    static SetText(id, text) {
+        setTextContentOnElementWithId(id, text);
     }
 }
 
@@ -78,4 +82,9 @@ function addClickEventListenerToElementWithId(id, fn) {
 function resetClickEventListenerOnElement(element) {
     let new_element = element.cloneNode(true);
     element.parentNode.replaceChild(new_element, element);
+}
+
+function setTextContentOnElementWithId(id, text) {
+    let element = document.getElementById(id);
+    element.textContent = text;
 }
