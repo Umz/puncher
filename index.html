@@ -6,13 +6,30 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gajraj+One&family=Kanit&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="styles/common.css" />
 
     <title>Platform Punch Off | Umz Games</title>
   </head>
   <body>
+    <div id="boot-container">
+      <div id="boot-logo-holder">
+      </div>
+    </div>
+    <div id="logo-container" class="fullscreen overlay">
+      <div id="logo-holder" class="fullscreen flex">
+        <img id="logo-img" src="src/assets/logo2.png" alt="Platform Puncher" />
+      </div>
+    </div>
+    <div id="menu-container" class="fullscreen overlay">
+      <div id="menu-holder" class="flex">
+        <div id="menu-play" class="flex-1 menu-item menu-active">Play</div>
+        <div id="menu-how" class="flex-1 menu-item">How</div>
+        <div id="menu-credits" class="flex-1 menu-item">Credits</div>
+        <div id="menu-exit" class="flex-1 menu-item">Exit</div>
+      </div>
+    </div>
     <div id="phaser-game"></div>
   </body>
 </html>

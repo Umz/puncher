@@ -1,6 +1,19 @@
 const Text = {
 
-    // Scenes
+    //  HTML
+
+    DOM_LOGO: "logo-container",
+    DOM_MENU: "menu-container",
+
+    MENU_SELECTED: "menu-active",
+    MENU_ITEMS: "menu-item",
+
+    MENU_PLAY: "menu-play",
+    MENU_HOW: "menu-how",
+    MENU_CREDITS: "menu-credits",
+    MENU_EXIT: "menu-exit",
+
+    //  Scenes
 
     PRELOAD: "Preload",
     BACKGROUND: "Background",

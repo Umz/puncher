@@ -19,7 +19,7 @@ export default class Preload extends Phaser.Scene {
         this.createGraphics();
 
         this.scene.launch(Text.BACKGROUND);
-        this.scene.launch(Text.GAME);
+        this.scene.launch(Text.MENU);
     }
 
     createAnimations() {
