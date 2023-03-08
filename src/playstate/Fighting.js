@@ -40,6 +40,7 @@ export default class Filling extends Playstate {
 
     update(time, delta) {
         if (this.counter.updateAndCheck(time, delta)) {
+            hideArrows();
             this.fireEvent(Text.EVENT_HIT);
         }
     }
