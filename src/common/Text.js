@@ -20,6 +20,10 @@ const Text = {
     HUD_ARROW_LEFT: "hud-arrow-left",
     HUD_ARROW_RIGHT: "hud-arrow-right",
 
+    HUD_HEALTH: "hud-health",
+    HUD_PLAYER_HP: "hp-player",
+    HUD_OPPONENT_HP: "hp-opponent",
+
     //  Scenes
 
     PRELOAD: "Preload",

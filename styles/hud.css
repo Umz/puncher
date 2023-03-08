@@ -1,5 +1,6 @@
 #hud-container {
     z-index: 7;
+    pointer-events: none;
 }
 
 /* Arrows */
@@ -15,4 +16,32 @@
 }
 #hud-arrow-right {
     display: none;
+}
+
+/* Health Bars */
+#hud-health {
+    visibility: hidden;
+    width: 50%;
+    margin: 5% auto;
+    gap: 5%;
+    color: #3d1a23;
+    text-transform: uppercase;
+}
+.hp-bar {
+    display: block;
+    height: 30px;
+    border: 1px solid #3d1a23;
+    background-color: #411c01;
+    border-bottom: 3px solid #3d1a23;
+    padding: 3px;
+}
+.hp-fill {
+    display: block;
+    height: 100%;
+    width: 80%;
+    background-color: #cb7233;
+}
+#hp-player {
+    position: relative;
+    left: 20%;
 }
