@@ -44,5 +44,9 @@ const Text = {
     EVENT_ATTACK: "player-attack",
     EVENT_DEFEND: "player-defend",
     EVENT_HIT: "player-hit"
+
+    //  Sounds
+
+    
 }
 export default Text;

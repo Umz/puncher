@@ -9,11 +9,14 @@
             - Clouds and smoke or mist
                 > Floating independent clouds 
                 > Clouds in/out alpha
+            [FX] Warp in
         [Sounds]
             - Heartbeat
             - Wind effect for the BG Sound
             - Punch (Getting hit)
-            - Bar filling up 
+            - Block (Thud)
+            - Warp in
+            - Die
             - Bar hit / select
             - Scream (3+)
             - Menu moving
