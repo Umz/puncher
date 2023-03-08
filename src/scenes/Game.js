@@ -32,14 +32,15 @@ export default class Game extends Phaser.Scene {
         let platform = this.physics.add.sprite(x, y, Text.SHEET, Text.FG_PLATFORM);
         platform.setScale(2);
         platform.setDepth(Value.DEPTH_PLATFORM);
-        let pos = platform.getTopLeft();
-
+        
+        let tl = platform.getTopLeft();
         let fallingRocks = emitterFactory.get(Text.EMIT_PLATFORM);
-        fallingRocks.setPosition(pos.x, pos.y + 2);
+        fallingRocks.setPosition(tl.x, tl.y + 2);
         fallingRocks.start();
 
-        let player = new Fighter(this, x-16, pos.y, Text.SHEET, Text.SPR_TOLU);
-        let opponent = new Fighter(this, x+16, pos.y, Text.SHEET, Text.SPR_TOLU).setFlipX(true);
+        let tc = platform.getTopCenter();
+        let player = new Fighter(this, tc.x-16, tc.y, Text.SHEET, Text.SPR_TOLU);
+        let opponent = new Fighter(this, tc.x+16, tc.y, Text.SHEET, Text.SPR_TOLU).setFlipX(true);
         player.playIdle();
         opponent.playIdle();
 
@@ -48,6 +49,9 @@ export default class Game extends Phaser.Scene {
 
         this.p1 = player;
         this.p2 = opponent;
+
+        this.tweenInSprite(player);
+        this.tweenInSprite(opponent);
         
         this.states = [
             new Ready(this),
@@ -163,6 +167,8 @@ export default class Game extends Phaser.Scene {
     }
 
     exitToMenu() {
-        this.scene.start(Text.MENU);
+        this.state.reset();
+        this.scene.launch(Text.MENU, {remove:true});
+        this.scene.setVisible(false);
     }
 }
