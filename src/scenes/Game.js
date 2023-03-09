@@ -9,6 +9,7 @@ import Fighting from "../playstate/Fighting";
 import RoundOver from "../playstate/RoundOver";
 import Dom from "../util/Dom";
 import Juke from "../util/Juke";
+import Sfx from "../const/Sfx";
 
 export default class Game extends Phaser.Scene {
       
@@ -18,7 +19,8 @@ export default class Game extends Phaser.Scene {
     
     create () {
 
-        this.juke = new Juke(this);
+        const juke = new Juke(this);
+        this.juke = juke;
 
         let x = Value.WIDTH / 2;
         let y = Value.HEIGHT / 2;
@@ -87,33 +89,50 @@ export default class Game extends Phaser.Scene {
         let emiiterL = emitterFactory.get(Text.EMIT_HIT_LEFT);
 
         this.events.on(Text.EVENT_HIT, ()=>{
+            
             this.playerHP --;
+            
             player.defend(false);
             opponent.attack();
+
+            juke.play(Sfx.GAME_PUNCH);
             emiiterL.explode(70, opponent.getLeftCenter().x, opponent.getLeftCenter().y);
+
             shakeCam.shake(100, .02, true);
             this.checkRoundOver();
         });
 
         this.events.on(Text.EVENT_ATTACK, (hit)=>{
+            
             player.attack();
             opponent.defend(!hit)
+
             if (hit) {
                 shakeCam.shake(100, .02, true);
                 emiiterR.explode(70, player.getRightCenter().x, player.getRightCenter().y);
                 this.opponentHP --;
+                juke.play(Sfx.GAME_PUNCH);
             }
+            else
+                juke.play(Sfx.GAME_BLOCK);
+
             this.checkRoundOver();
         });
 
         this.events.on(Text.EVENT_DEFEND, (blocked)=>{
+            
             player.defend(blocked);
             opponent.attack();
+
             if (!blocked) {
                 shakeCam.shake(100, .02, true);
                 this.playerHP --;
                 emiiterL.explode(70, opponent.getLeftCenter().x, opponent.getLeftCenter().y);
+                juke.play(Sfx.GAME_PUNCH);
             }
+            else
+                juke.play(Sfx.GAME_BLOCK);
+
             this.checkRoundOver();
         });
     }

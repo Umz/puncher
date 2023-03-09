@@ -1,6 +1,7 @@
 import Playstate from "../class/Playstate";
 import Text from "../common/Text";
 import Dom from "../util/Dom";
+import Sfx from "../const/Sfx";
 
 export default class Ready extends Playstate {
 
@@ -10,8 +11,10 @@ export default class Ready extends Playstate {
     }
 
     update(time, delta) {
-        if (this.counter.updateAndCheck(time, delta))
+        if (this.counter.updateAndCheck(time, delta)) {
             this.nextState();
+            this.playSound(Sfx.GAME_START);
+        }
     }
 
     init() {

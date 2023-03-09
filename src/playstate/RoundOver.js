@@ -1,5 +1,6 @@
 import Playstate from "../class/Playstate";
 import Text from "../common/Text";
+import Sfx from "../const/Sfx";
 import Dom from "../util/Dom";
 import KeyControl from "../util/KeyControl";
 
@@ -13,12 +14,15 @@ export default class Ready extends Playstate {
 
         KeyControl.AddRightControl(this.scene, (event) => {
             KeyControl.TraverseMenu(Text.CHOICE_SELECTED, 1);
+            this.playSound(Sfx.MENU_MOVE);
         });
         KeyControl.AddLeftControl(this.scene, (event) => {
             KeyControl.TraverseMenu(Text.CHOICE_SELECTED, -1);
+            this.playSound(Sfx.MENU_MOVE);
         });
         KeyControl.AddActionControl(this.scene, (event) => {
             KeyControl.SelectMenuItem(Text.CHOICE_SELECTED);
+            this.playSound(Sfx.MENU_CLICK);
         });
 
         Dom.AddClick(Text.CHOICE_LEFT, (event)=>{
