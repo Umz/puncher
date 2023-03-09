@@ -8,6 +8,7 @@ import Ready from "../playstate/Ready";
 import Fighting from "../playstate/Fighting";
 import RoundOver from "../playstate/RoundOver";
 import Dom from "../util/Dom";
+import Juke from "../util/Juke";
 
 export default class Game extends Phaser.Scene {
       
@@ -16,6 +17,8 @@ export default class Game extends Phaser.Scene {
     }
     
     create () {
+
+        this.juke = new Juke(this);
 
         let x = Value.WIDTH / 2;
         let y = Value.HEIGHT / 2;

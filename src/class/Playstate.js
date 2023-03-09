@@ -5,6 +5,7 @@ export default class Playstate {
 
     constructor(scene) {
         this.scene = scene;
+        this.juke = scene.juke;
         this.counter = new Counter();
     }
 
@@ -22,5 +23,9 @@ export default class Playstate {
 
     fireEvent(eventName, data) {
         this.scene.events.emit(eventName, data);
+    }
+
+    playSound(sfx) {
+        this.juke.play(sfx);
     }
 }
