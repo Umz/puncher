@@ -10,8 +10,10 @@ export default class Menu extends Phaser.Scene {
     
     create () {
 
-        showMenu();
+        //showMenu();
+        hideMenu();
         this.addKeyControls();
+        this.scene.start(Text.GAME);
 
         Dom.AddClick(Text.MENU_PLAY, ()=>{
             resetMenu();

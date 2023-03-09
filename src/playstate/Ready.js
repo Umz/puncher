@@ -1,10 +1,12 @@
 import Playstate from "../class/Playstate";
+import Text from "../common/Text";
+import Dom from "../util/Dom";
 
 export default class Ready extends Playstate {
 
     constructor(scene) {
         super(scene);
-        this.counter.setMaxCount(500);
+        this.counter.setMaxCount(1500);
     }
 
     update(time, delta) {
@@ -13,16 +15,12 @@ export default class Ready extends Playstate {
     }
 
     init() {
-        //  Show the Get Ready on HUD
-        this.showNotice();
         this.scene.resetRound();
+        Dom.SetVisible(Text.HUD_READY);
     }
 
-    showNotice() {
-        // Contact the Dom to do the notice
-    }
-
-    hideNotice() {
-        //  Contact the DOM to do the notice
+    reset() {
+        super.reset();
+        Dom.SetHidden(Text.HUD_READY);
     }
 }

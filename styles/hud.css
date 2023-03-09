@@ -53,3 +53,33 @@
     font-size: calc(1.5em + 1vmin);
     color: #3d1a23;
 }
+
+/* Get Ready */
+#hud-ready {
+    width: 100%;
+    visibility: hidden;
+    position: absolute;
+    bottom: 25%;
+    font-size: calc(1.5em + 1vmin);
+    text-align: center;
+    z-index: 4;
+    color: #3d1a23;
+    animation: blinker .75s linear infinite;
+}
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Feedback */
+#hud-feedback {
+    position: absolute;
+    width: 100%;
+    visibility: visible;
+    top: 35%;
+    z-index: 4;
+
+    font-size: calc(.5em + 1vmin);
+    text-align: center;
+}

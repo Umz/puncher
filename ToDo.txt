@@ -1,6 +1,7 @@
 # BUILD THE GAME
 +Complete the HTML shell
 +Complete the JS shells
++Add the Menu and HUD/UI elements
 
     @ Fix
         Timing reset-
@@ -35,10 +36,7 @@
             - Add 7-13 sprites
         [Data Storage]
             - High score
-    @ Add the Menu and HUD/UI elements
-        [HUD]
-            - Points on touch (Hit, Block)
-            - Get Ready
+    
     @ Add loading, booting, transition screens
         - Pre game loaded boot screen (UG Logo)
     @ Add branding, polishing images and screens

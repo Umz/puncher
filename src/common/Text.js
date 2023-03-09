@@ -40,6 +40,12 @@ const Text = {
     HUD_OPPONENT_HP: "hp-opponent",
     HUD_ROUND: "hud-round",
 
+    HUD_READY: "hud-ready",
+    HUD_FEEDBACK: "hud-feedback",
+
+    HUD_HIT: "Hit",
+    HUD_BLOCK: "Block",
+
     //  Scenes
 
     PRELOAD: "Preload",

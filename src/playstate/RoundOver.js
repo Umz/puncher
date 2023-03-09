@@ -22,6 +22,7 @@ export default class Ready extends Playstate {
         });
 
         Dom.AddClick(Text.CHOICE_LEFT, (event)=>{
+            this.reset();
             this.fireEvent(Text.EVENT_NEXT_STATE);
         });
         Dom.AddClick(Text.CHOICE_RIGHT, (event)=>{
@@ -69,6 +70,7 @@ function showChoiceMenu() {
 
 function hideChoiceMenu() {
     Dom.SetHidden(Text.DOM_CHOICES);
+    Dom.SetHidden(Text.DOM_CHOICES_BUTTONS);
 }
 
 function resetClicks() {
