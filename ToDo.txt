@@ -22,15 +22,12 @@
         [Sounds]
             - Heartbeat
             - Wind effect for the BG Sound
-            - Punch (Getting hit)
-            - Block (Thud)
             - Warp in
             - Die
-            - Bar hit / select
             - Scream (3+)
             - Menu close (back)
             - Win Round
-            - Lose Round 
+            - Lose Round
             - Quit Game
         [Graphics]
             - Add 7-13 sprites

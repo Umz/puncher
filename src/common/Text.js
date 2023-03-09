@@ -96,5 +96,9 @@ const Text = {
     SND_MENU_MOVE: "menu_move.ogg",
     SND_MENU_CLICK: "menu_click.ogg",
     SND_MENU_PLAY: "menu_play.ogg",
+
+    SND_GAME_START: "game_battle_start.ogg",
+    SND_GAME_PUNCH: "game_punch.ogg",
+    SND_GAME_BLOCK: "game_block.ogg",
 }
 export default Text;
