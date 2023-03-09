@@ -68,13 +68,13 @@ export default class Game extends Phaser.Scene {
 
         //  STATE Events
 
-        this.events.on(Text.EVENT_NEXT_STATE, ()=>{
+        this.events.on(Text.EVENT_NEXT_STATE, (data)=>{
             
             this.stateIndex = this.stateIndex + 1 >= this.states.length ? 0 : this.stateIndex + 1;
             this.state.reset();
 
             this.state = this.states[this.stateIndex];
-            this.state.init();
+            this.state.init(data);
         });
 
         //  Battle Events
@@ -141,7 +141,7 @@ export default class Game extends Phaser.Scene {
             this.opponentHP = 3 + this.roundsWon;
             this.opponentMax = this.opponentHP;
         
-            this.events.emit(Text.EVENT_NEXT_STATE);
+            this.events.emit(Text.EVENT_NEXT_STATE, win);
             hideHP();
         }
         else {

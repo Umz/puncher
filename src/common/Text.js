@@ -7,6 +7,8 @@ const Text = {
     DOM_HOW: "how-container",
     DOM_CREDITS: "credits-container",
     DOM_HUD: "hud-container",
+    DOM_CHOICES: "select-container",
+    DOM_CHOICES_BUTTONS: "select-choices",
 
     MENU_SELECTED: "menu-active",
     MENU_ITEMS: "menu-item",
@@ -16,6 +18,19 @@ const Text = {
     MENU_HOW: "menu-how",
     MENU_CREDITS: "menu-credits",
     MENU_EXIT: "menu-exit",
+
+    CHOICE_TITLE: "choice-title",
+    CHOICE_SUBTITLE: "choice-subtitle",
+    CHOICE_LEFT: "choice-left",
+    CHOICE_RIGHT: "choice-right",
+    CHOICE_SELECTED: "choice-active",
+    CHOICE_ITEM: "choice-item",
+
+    TITLE_NEXT: "Keep Going",
+    TITLE_RETRY: "Try Again.",
+    TITLE_QUIT: "Stop Here?",
+    SUBTITLE_NEXT: "Next opponent incoming..",
+    SUBTITLE_RETRY: "You almost had it",
 
     HUD_ARROW_LEFT: "hud-arrow-left",
     HUD_ARROW_RIGHT: "hud-arrow-right",

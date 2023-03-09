@@ -2,6 +2,9 @@
 +Complete the HTML shell
 +Complete the JS shells
 
+    @ Fix
+        Timing reset-
+
     @ Complete the Gameplay First
         [Background with Graphics] (DEFER)
             - Platforms in the Sky
@@ -10,6 +13,8 @@
                 > Floating independent clouds 
                 > Clouds in/out alpha
             [FX] Warp in
+            [FX] Sparkle on Round 10+
+            [FX] White outline 15+
             [Menu] Exit
         [Sounds]
             - Heartbeat
@@ -34,8 +39,6 @@
         [HUD]
             - Points on touch (Hit, Block)
             - Get Ready
-        [Pause / Quit / Round]
-            - Yes / No
     @ Add loading, booting, transition screens
         - Pre game loaded boot screen (UG Logo)
     @ Add branding, polishing images and screens
@@ -44,6 +47,7 @@
         [Back button]
     @ Add TV specific commands, back, etc.
         [Back button]
+            - Pause Menu Mid Game (Uses Dom on Pause)
             - Exit the app
 # CREATE THE MARKETING
     @ HTML page

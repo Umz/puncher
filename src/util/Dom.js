@@ -57,6 +57,10 @@ export default class Dom {
     static SetHP(id, pc) {
         setHPBarWidth(id, pc);
     }
+
+    static ResetMenu(className, activeName) {
+        resetMenu(className, activeName);
+    }
 }
 
 function setDisplayOnElementWithId(id, value) {
@@ -104,6 +108,14 @@ function resetClickEventListenerOnElement(element) {
 function setTextContentOnElementWithId(id, text) {
     let element = document.getElementById(id);
     element.textContent = text;
+}
+
+function resetMenu(className, activeName) {
+    let activeElement = Dom.GetFirstFromClass(activeName);
+    Dom.RemoveClass(activeElement, activeName);
+
+    let firstElement = Dom.GetFirstFromClass(className);
+    Dom.AddClass(firstElement, activeName);
 }
 
 function setHPBarWidth(id, percent) {
