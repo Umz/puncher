@@ -32,9 +32,10 @@
             - High score
     @ Add the Menu and HUD/UI elements
         [HUD]
-            - Round count
             - Points on touch (Hit, Block)
             - Get Ready
+        [Pause / Quit / Round]
+            - Yes / No
     @ Add loading, booting, transition screens
         - Pre game loaded boot screen (UG Logo)
     @ Add branding, polishing images and screens

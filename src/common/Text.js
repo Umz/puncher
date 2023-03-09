@@ -23,6 +23,7 @@ const Text = {
     HUD_HEALTH: "hud-health",
     HUD_PLAYER_HP: "hp-player",
     HUD_OPPONENT_HP: "hp-opponent",
+    HUD_ROUND: "hud-round",
 
     //  Scenes
 

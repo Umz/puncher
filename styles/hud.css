@@ -9,7 +9,7 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    bottom: 25%;
+    bottom: 20%;
 }
 #hud-arrow-left {
     display: none;
@@ -22,7 +22,7 @@
 #hud-health {
     visibility: hidden;
     width: 50%;
-    margin: 5% auto;
+    margin: 5% auto 1% auto;
     gap: 5%;
     color: #3d1a23;
     text-transform: uppercase;
@@ -38,10 +38,18 @@
 .hp-fill {
     display: block;
     height: 100%;
-    width: 80%;
+    width: 100%;
     background-color: #cb7233;
 }
 #hp-player {
     position: relative;
-    left: 20%;
+}
+
+/* Round Count */
+#hud-round {
+    z-index: 6;
+    visibility: hidden;
+    text-align: center;
+    font-size: calc(1.5em + 1vmin);
+    color: #3d1a23;
 }

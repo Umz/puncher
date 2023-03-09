@@ -164,6 +164,7 @@ export default class Game extends Phaser.Scene {
             this.tweenInSprite(this.p2);
         }
 
+        updateRoundNumber(this.roundsWon + 1);
         updateHP(this.playerHP, this.opponentHP, this.opponentMax);
         showHP();
     }
@@ -190,10 +191,12 @@ export default class Game extends Phaser.Scene {
 
 function showHP() {
     Dom.SetVisible(Text.HUD_HEALTH);
+    Dom.SetVisible(Text.HUD_ROUND);
 }
 
 function hideHP() {
     Dom.SetHidden(Text.HUD_HEALTH);
+    Dom.SetHidden(Text.HUD_ROUND);
 }
 
 function updateHP(playerHP, oppHP, oppMax) {
@@ -201,4 +204,8 @@ function updateHP(playerHP, oppHP, oppMax) {
     let opponentPC = Math.round(oppHP / oppMax * 100);
     Dom.SetHP(Text.HUD_PLAYER_HP, playerPC);
     Dom.SetHP(Text.HUD_OPPONENT_HP, opponentPC);
+}
+
+function updateRoundNumber(num) {
+    Dom.SetText(Text.HUD_ROUND, "Round " + num);
 }
