@@ -1,6 +1,9 @@
 import Phaser from "phaser";
 import Text from "../common/Text";
+import Sfx from "../const/Sfx";
 import Dom from "../util/Dom";
+import Juke from "../util/Juke";
+import KeyControl from "../util/KeyControl";
 
 export default class Menu extends Phaser.Scene {
     
@@ -10,13 +13,15 @@ export default class Menu extends Phaser.Scene {
     
     create () {
 
-        //showMenu();
-        hideMenu();
-        this.addKeyControls();
-        this.scene.start(Text.GAME);
+        let juke = new Juke(this);
+
+        showMenu();
+        //hideMenu();
+
+        //  CLICK on elements
 
         Dom.AddClick(Text.MENU_PLAY, ()=>{
-            resetMenu();
+            Dom.ResetMenu(Text.MENU_ITEMS, Text.MENU_SELECTED);
             hideMenu();
             if (this.scene.isActive(Text.GAME)) {
                 this.scene.setVisible(true, Text.GAME);
@@ -26,97 +31,59 @@ export default class Menu extends Phaser.Scene {
             else {
                 this.scene.start(Text.GAME);
             }
+            juke.play(Sfx.MENU_PLAY);
         });
-
         Dom.AddClick(Text.MENU_HOW, ()=>{
             setMenuItemSelected(Text.MENU_HOW);
             showPopup(Text.DOM_HOW);
+            juke.play(Sfx.MENU_CLICK);
         });
-
         Dom.AddClick(Text.MENU_CREDITS, ()=>{
             setMenuItemSelected(Text.MENU_CREDITS);
             showPopup(Text.DOM_CREDITS);
+            juke.play(Sfx.MENU_CLICK);
         });
         Dom.AddClick(Text.MENU_EXIT, ()=>{
             setMenuItemSelected(Text.MENU_EXIT);
+            juke.play(Sfx.MENU_CLICK);
         });
 
-        Dom.AddClick(Text.DOM_HOW, ()=>{
+        Dom.AddClick(Text.DOM_HOW, hidePopups);
+        Dom.AddClick(Text.DOM_CREDITS, hidePopups);
+
+        //  UP and DOWN controls
+
+        KeyControl.AddDownControl(this, ()=>{
+            juke.play(Sfx.MENU_MOVE);
+            KeyControl.TraverseMenu(Text.MENU_SELECTED, 1);
             hidePopups();
         });
-        Dom.AddClick(Text.DOM_CREDITS, ()=>{
+        KeyControl.AddUpControl(this, ()=>{
+            juke.play(Sfx.MENU_MOVE);
+            KeyControl.TraverseMenu(Text.MENU_SELECTED, -1);
             hidePopups();
         });
-    }
-    
-    addKeyControls() {
+        KeyControl.AddActionControl(this, (event) => {
+            KeyControl.SelectMenuItem(Text.MENU_SELECTED);
+        });
 
-        this.input.keyboard.on('keydown-UP', moveMenuUp);
-        this.input.keyboard.on('keydown-DOWN', moveMenuDown);
-        this.input.keyboard.on('keydown-TWO', moveMenuUp);
-        this.input.keyboard.on('keydown-EIGHT', moveMenuDown);
-
-        this.input.keyboard.on('keydown-ENTER', selectCurrentMenuItem);
-        this.input.keyboard.on('keydown-SPACEBAR', selectCurrentMenuItem);
         this.input.keyboard.on('keydown-BACKSPACE', backButton);
     }
 }
 
-function moveMenuDown(event) {
-    moveMenuSelected(1);
-}
-
-function moveMenuUp(event) {
-    moveMenuSelected(-1);
-}
-
-function selectCurrentMenuItem(event) {
-    selectedMenuItemAcion();
-}
-
 function backButton(event) {
+    console.log('BS');
     // Select exit
     // If already selected, exit game
 }
 
 //  DOM Controls
 
-function moveMenuSelected(dir = 1) {
-    let activeElement = Dom.GetFirstFromClass(Text.MENU_SELECTED);
-    Dom.RemoveClass(activeElement, Text.MENU_SELECTED);
-    
-    let prev = activeElement.previousElementSibling || activeElement.parentElement.lastElementChild;
-    let next = activeElement.nextElementSibling || activeElement.parentElement.firstElementChild;
-    let nextElement = (dir > 0) ? next : prev;
-    Dom.AddClass(nextElement, Text.MENU_SELECTED);
-
-    hidePopups();
-}
-
-function selectedMenuItemAcion() {
-    let activeElement = Dom.GetFirstFromClass(Text.MENU_SELECTED);
-    try {
-        activeElement.action();
-    }
-    catch (error) {}
-}
-
 function setMenuItemSelected(id) {
     let activeElement = Dom.GetFirstFromClass(Text.MENU_SELECTED);
     let clicked = Dom.GetId(id);
     Dom.RemoveClass(activeElement, Text.MENU_SELECTED);
     Dom.AddClass(clicked, Text.MENU_SELECTED);
-}
-
-function resetMenu() {
-    Dom.ResetClickOnClass(Text.MENU_ITEMS);
-    Dom.ResetClickOnClass(Text.MENU_POPUP);
-    
-    let activeElement = Dom.GetFirstFromClass(Text.MENU_SELECTED);
-    Dom.RemoveClass(activeElement, Text.MENU_SELECTED);
-
-    let firstElement = Dom.GetFirstFromClass(Text.MENU_ITEMS);
-    Dom.AddClass(firstElement, Text.MENU_SELECTED);
 }
 
 function showPopup(id) {

@@ -2,6 +2,7 @@ import Phaser from "phaser";
 import Text from "../common/Text";
 import AtlasImg from "../assets/allsheet.png";
 import AtlasJson from "../assets/allsheet.json";
+import Sfx from "../const/Sfx";
 
 export default class Preload extends Phaser.Scene {
 
@@ -11,6 +12,8 @@ export default class Preload extends Phaser.Scene {
     
     preload () {
         this.load.atlas(Text.SHEET, AtlasImg, AtlasJson);
+        for (let [key, data] of Object.entries(Sfx))
+            this.load.audio(data.key, `./src/assets/sounds/${data.key}`);
     }
     
     create () {

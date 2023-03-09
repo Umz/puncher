@@ -5,6 +5,8 @@
 
     @ Fix
         Timing reset-
+        Menu Refactor to use KeyControl
+        Lives 4, 5
 
     @ Complete the Gameplay First
         [Background with Graphics] (DEFER)
@@ -26,8 +28,6 @@
             - Die
             - Bar hit / select
             - Scream (3+)
-            - Menu moving
-            - Menu selecting
             - Menu close (back)
             - Win Round
             - Lose Round 

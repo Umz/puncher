@@ -89,10 +89,12 @@ const Text = {
     EVENT_NEXT_STATE: "game-flow-next-state",
     EVENT_ATTACK: "player-attack",
     EVENT_DEFEND: "player-defend",
-    EVENT_HIT: "player-hit"
+    EVENT_HIT: "player-hit",
 
     //  Sounds
 
-    
+    SND_MENU_MOVE: "menu_move.ogg",
+    SND_MENU_CLICK: "menu_click.ogg",
+    SND_MENU_PLAY: "menu_play.ogg",
 }
 export default Text;
