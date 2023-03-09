@@ -7,6 +7,7 @@ import Fighter from "../sprite/Fighter";
 import Ready from "../playstate/Ready";
 import Fighting from "../playstate/Fighting";
 import RoundOver from "../playstate/RoundOver";
+import Dom from "../util/Dom";
 
 export default class Game extends Phaser.Scene {
       
@@ -22,6 +23,7 @@ export default class Game extends Phaser.Scene {
         this.roundsWon = 0;
         this.playerHP = 3;
         this.opponentHP = 3;
+        this.opponentMax = 3;
         this.stateIndex = 0;
 
         let emitterFactory = new EmitterFactory(this);
@@ -29,7 +31,7 @@ export default class Game extends Phaser.Scene {
         emitterFactory.createEmitter(Text.EMIT_HIT_RIGHT, Emitter.HIT_RIGHT);
         emitterFactory.createEmitter(Text.EMIT_HIT_LEFT, Emitter.HIT_LEFT);
 
-        let platform = this.physics.add.sprite(x, y, Text.SHEET, Text.FG_PLATFORM);
+        let platform = this.physics.add.sprite(x, Value.HEIGHT * .6, Text.SHEET, Text.FG_PLATFORM);
         platform.setScale(2);
         platform.setDepth(Value.DEPTH_PLATFORM);
         
@@ -61,6 +63,8 @@ export default class Game extends Phaser.Scene {
 
         this.state = this.states[this.stateIndex];
         this.state.init();
+
+        showHP();
 
         //  STATE Events
 
@@ -117,6 +121,8 @@ export default class Game extends Phaser.Scene {
     }
 
     checkRoundOver() {
+
+        updateHP(this.playerHP, this.opponentHP, this.opponentMax);
         
         if (this.playerHP <= 0 || this.opponentHP <= 0) {
 
@@ -133,8 +139,10 @@ export default class Game extends Phaser.Scene {
 
             this.playerHP = 3;
             this.opponentHP = 3 + this.roundsWon;
+            this.opponentMax = this.opponentHP;
         
             this.events.emit(Text.EVENT_NEXT_STATE);
+            hideHP();
         }
         else {
             this.state.setNextButton();
@@ -146,6 +154,7 @@ export default class Game extends Phaser.Scene {
         if (this.p1.alpha === 0) {
             this.roundsWon = 0;
             this.opponentHP = 3;
+            this.opponentMax = this.opponentHP;
             this.tweenInSprite(this.p1);
         }
         
@@ -154,6 +163,9 @@ export default class Game extends Phaser.Scene {
             // Set
             this.tweenInSprite(this.p2);
         }
+
+        updateHP(this.playerHP, this.opponentHP, this.opponentMax);
+        showHP();
     }
     
     tweenInSprite(sprite) {
@@ -174,4 +186,19 @@ export default class Game extends Phaser.Scene {
         this.scene.launch(Text.MENU, {remove:true});
         this.scene.setVisible(false);
     }
+}
+
+function showHP() {
+    Dom.SetVisible(Text.HUD_HEALTH);
+}
+
+function hideHP() {
+    Dom.SetHidden(Text.HUD_HEALTH);
+}
+
+function updateHP(playerHP, oppHP, oppMax) {
+    let playerPC = Math.round(playerHP / 3 * 100);
+    let opponentPC = Math.round(oppHP / oppMax * 100);
+    Dom.SetHP(Text.HUD_PLAYER_HP, playerPC);
+    Dom.SetHP(Text.HUD_OPPONENT_HP, opponentPC);
 }

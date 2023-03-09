@@ -32,10 +32,8 @@
             - High score
     @ Add the Menu and HUD/UI elements
         [HUD]
-            - Left or Right
-            - Power Bar 
-            - Points on touch (Hit, Block)
             - Round count
+            - Points on touch (Hit, Block)
             - Get Ready
     @ Add loading, booting, transition screens
         - Pre game loaded boot screen (UG Logo)

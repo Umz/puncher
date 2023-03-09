@@ -53,6 +53,10 @@ export default class Dom {
     static SetText(id, text) {
         setTextContentOnElementWithId(id, text);
     }
+
+    static SetHP(id, pc) {
+        setHPBarWidth(id, pc);
+    }
 }
 
 function setDisplayOnElementWithId(id, value) {
@@ -100,4 +104,10 @@ function resetClickEventListenerOnElement(element) {
 function setTextContentOnElementWithId(id, text) {
     let element = document.getElementById(id);
     element.textContent = text;
+}
+
+function setHPBarWidth(id, percent) {
+    let element = document.getElementById(id);
+    element.style.width = percent + "%";
+    element.style.left = (100 - percent) + "%";
 }
