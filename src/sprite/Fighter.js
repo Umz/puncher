@@ -67,7 +67,7 @@ export default class Fighter extends Phaser.Physics.Arcade.Sprite {
     }
     
     setRandomSprite() {
-        let opts = [Text.SPR_AKI, Text.SPR_FOREST];
+        let opts = [Text.SPR_TOLU, Text.SPR_FOREST, Text.SPR_AKI, Text.SPR_SOLDIER, Text.SPR_SOLDIER_HG, Text.SPR_YELLOW, Text.SPR_BLOCKY, Text.SPR_SPY, Text.SPR_NINJA, Text.SPR_SAMURAI];
         let prefix = Phaser.Utils.Array.GetRandom(opts);
         this.setSprite(prefix);
     }

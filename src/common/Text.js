@@ -74,9 +74,16 @@ const Text = {
     TX_WIND: "wind-circle",
 
     SPR_TOLU: "tolu",
-    SPR_BLOCKY: "",
     SPR_AKI: "aki",
     SPR_FOREST: "forest",
+    SPR_SOLDIER: "soldier",
+    SPR_SOLDIER_HG: "soldierHG",
+
+    SPR_YELLOW: "yellow",
+    SPR_BLOCKY: "blocky",
+    SPR_SPY: "spy",
+    SPR_NINJA: "ninja",
+    SPR_SAMURAI: "samurai",
 
     //  Emitters
 

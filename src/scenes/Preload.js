@@ -27,7 +27,7 @@ export default class Preload extends Phaser.Scene {
     }
 
     createAnimations() {
-        let sprites = [Text.SPR_TOLU, Text.SPR_FOREST, Text.SPR_AKI];
+        let sprites = [Text.SPR_TOLU, Text.SPR_FOREST, Text.SPR_AKI, Text.SPR_SOLDIER, Text.SPR_SOLDIER_HG, Text.SPR_YELLOW, Text.SPR_BLOCKY, Text.SPR_SPY, Text.SPR_NINJA, Text.SPR_SAMURAI];
         for (let sprite of sprites) {
             let prefix = `spr_${sprite}_idle`;
             let config = {

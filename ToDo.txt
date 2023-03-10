@@ -27,8 +27,6 @@
             - Clouds and smoke or mist
                 > Floating independent clouds 
                 > Clouds in/out alpha
-        [Graphics]
-            - Add 7-13 sprites
         [Data Storage]
             - High score
     
