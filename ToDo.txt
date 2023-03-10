@@ -7,6 +7,9 @@
         Timing reset-
         Menu Refactor to use KeyControl
         Lives 4, 5
+        Hide both buttons after rounds
+        Menu controls - pause, game-
+        Stop game flow
 
     @ Complete the Gameplay First
         [Background with Graphics] (DEFER)
@@ -20,14 +23,11 @@
             [FX] White outline 15+
             [Menu] Exit
         [Sounds]
-            - Heartbeat
-            - Wind effect for the BG Sound
             - Warp in
-            - Die
-            - Scream (3+)
-            - Menu close (back)
             - Win Round
             - Lose Round
+            - Wind effect for the BG Sound
+            - Menu close (back)
             - Quit Game
         [Graphics]
             - Add 7-13 sprites

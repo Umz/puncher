@@ -100,5 +100,11 @@ const Text = {
     SND_GAME_START: "game_battle_start.ogg",
     SND_GAME_PUNCH: "game_punch.ogg",
     SND_GAME_BLOCK: "game_block.ogg",
+
+    SND_GAME_DIE1: "game_die1.ogg",
+    SND_GAME_DIE2: "game_die2.ogg",
+    SND_GAME_DIE3: "game_die3.ogg",
+    SND_GAME_DIE4: "game_die4.ogg",
+    SND_GAME_DIE5: "game_die5.ogg",
 }
 export default Text;

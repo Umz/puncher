@@ -153,10 +153,14 @@ export default class Game extends Phaser.Scene {
                 this.roundsWon ++;
                 this.p1.playIdle();
                 this.p2.setAlpha(0);
+
+                let snd = Phaser.Utils.Array.GetRandom([Sfx.GAME_DIE1, Sfx.GAME_DIE2, Sfx.GAME_DIE3, Sfx.GAME_DIE4]);
+                this.juke.play(snd);
             }
             else {
                 this.p2.playIdle();
-                this.p1.setAlpha(0)
+                this.p1.setAlpha(0);
+                this.juke.play(Sfx.GAME_DIE5);
             }
 
             this.playerHP = 3;
