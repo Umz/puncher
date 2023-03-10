@@ -1,6 +1,7 @@
 import Playstate from "../class/Playstate";
 import Text from "../common/Text";
 import Dom from "../util/Dom";
+import KeyControl from "../util/KeyControl";
 
 const LEFT = 1;
 const RIGHT = 2;
@@ -19,10 +20,10 @@ export default class Filling extends Playstate {
 
     init() {
         
-        this.scene.input.keyboard.on('keydown-RIGHT', (event) => {
+        KeyControl.AddRightControl(this.scene, (event) => {
             this.buttonPress(RIGHT);
         });
-        this.scene.input.keyboard.on('keydown-LEFT', (event) => {
+        KeyControl.AddLeftControl(this.scene, (event) => {
             this.buttonPress(LEFT);
         });
 
@@ -34,8 +35,7 @@ export default class Filling extends Playstate {
 
     reset() {
         super.reset();
-        this.scene.input.keyboard.off('keydown-LEFT');
-        this.scene.input.keyboard.off('keydown-RIGHT');
+        KeyControl.RemoveAllControls(this.scene);
     }
 
     update(time, delta) {
