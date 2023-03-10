@@ -10,10 +10,17 @@ export default class Juke {
         let key = sfx.key;
         let config = sfx.config;
         
+        if (config.music) {
+            this.stop(key);
+        }
+
         let instances = this.scene.sound.getAll(key);
         if (instances.length < max)
             this.scene.sound.play(key, config);
+    }
 
-        //  Check to try and play music
+    stop(sfx) {
+        let key = sfx.key;
+        this.scene.sound.stopByKey(key);
     }
 }

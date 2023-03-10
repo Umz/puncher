@@ -23,14 +23,20 @@ export default class Menu extends Phaser.Scene {
         Dom.AddClick(Text.MENU_PLAY, ()=>{
             Dom.ResetMenu(Text.MENU_ITEMS, Text.MENU_SELECTED);
             hideMenu();
+
             if (this.scene.isActive(Text.GAME)) {
+
                 this.scene.setVisible(true, Text.GAME);
-                this.scene.get(Text.GAME).events.emit(Text.EVENT_NEXT_STATE);
+                
+                let gameScene = this.scene.get(Text.GAME);
+                gameScene.restartFromMenu();
+                gameScene.events.emit(Text.EVENT_NEXT_STATE);
+
                 this.scene.stop();
             }
-            else {
+            else
                 this.scene.start(Text.GAME);
-            }
+            
             juke.play(Sfx.MENU_PLAY);
         });
         Dom.AddClick(Text.MENU_HOW, ()=>{
