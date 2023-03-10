@@ -11,6 +11,12 @@
         Menu controls - pause, game-
         Stop game flow
 
+    @Optionals
+        [FX] Warp in FX
+        [FX] Sparkle on Round 10+
+        [FX] White outline 15+
+        [Menu] Exit
+        [Power Up]
     @ Complete the Gameplay First
         [Background with Graphics] (DEFER)
             - Platforms in the Sky
@@ -18,17 +24,8 @@
             - Clouds and smoke or mist
                 > Floating independent clouds 
                 > Clouds in/out alpha
-            [FX] Warp in
-            [FX] Sparkle on Round 10+
-            [FX] White outline 15+
-            [Menu] Exit
         [Sounds]
-            - Warp in
-            - Win Round
-            - Lose Round
             - Wind effect for the BG Sound
-            - Menu close (back)
-            - Quit Game
         [Graphics]
             - Add 7-13 sprites
         [Data Storage]

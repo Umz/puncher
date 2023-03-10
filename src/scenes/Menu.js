@@ -45,7 +45,7 @@ export default class Menu extends Phaser.Scene {
         });
         Dom.AddClick(Text.MENU_EXIT, ()=>{
             setMenuItemSelected(Text.MENU_EXIT);
-            juke.play(Sfx.MENU_CLICK);
+            juke.play(Sfx.MENU_CLOSE);
         });
 
         Dom.AddClick(Text.DOM_HOW, hidePopups);

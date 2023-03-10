@@ -96,10 +96,12 @@ const Text = {
     SND_MENU_MOVE: "menu_move.ogg",
     SND_MENU_CLICK: "menu_click.ogg",
     SND_MENU_PLAY: "menu_play.ogg",
+    SND_MENU_CLOSE: "menu_close.ogg",
 
     SND_GAME_START: "game_battle_start.ogg",
     SND_GAME_PUNCH: "game_punch.ogg",
     SND_GAME_BLOCK: "game_block.ogg",
+    SND_GAME_WARP: "game_warp.ogg",
 
     SND_GAME_DIE1: "game_die1.ogg",
     SND_GAME_DIE2: "game_die2.ogg",
