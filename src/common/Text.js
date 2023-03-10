@@ -1,5 +1,7 @@
 const Text = {
 
+    SAVE_NAME: "PlatformPuncher_1.0",
+
     //  HTML
 
     DOM_LOGO: "logo-container",

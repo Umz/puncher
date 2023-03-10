@@ -1,6 +1,7 @@
 import Playstate from "../class/Playstate";
 import Text from "../common/Text";
 import Dom from "../util/Dom";
+import GameSave from "../util/GameSave";
 import KeyControl from "../util/KeyControl";
 
 const LEFT = 1;
@@ -43,6 +44,8 @@ export default class Filling extends Playstate {
             hideArrows();
             this.fireEvent(Text.EVENT_HIT);
         }
+
+        GameSave.IncPlayTime(delta);
     }
 
     setNextButton() {

@@ -3,6 +3,7 @@ import Text from "../common/Text";
 import AtlasImg from "../assets/allsheet.png";
 import AtlasJson from "../assets/allsheet.json";
 import Sfx from "../const/Sfx";
+import GameSave from "../util/GameSave";
 
 export default class Preload extends Phaser.Scene {
 
@@ -21,6 +22,8 @@ export default class Preload extends Phaser.Scene {
 
         this.createAnimations();
         this.createGraphics();
+
+        GameSave.LoadFromLocalStorage();
 
         this.scene.launch(Text.BACKGROUND);
         this.scene.launch(Text.MENU);

@@ -10,6 +10,7 @@ import RoundOver from "../playstate/RoundOver";
 import Dom from "../util/Dom";
 import Juke from "../util/Juke";
 import Sfx from "../const/Sfx";
+import GameSave from "../util/GameSave";
 
 export default class Game extends Phaser.Scene {
       
@@ -155,7 +156,10 @@ export default class Game extends Phaser.Scene {
 
             let win = this.playerHP > 0;
             if (win) {
+                
                 this.roundsWon ++;
+                GameSave.SetMaxRound(this.roundsWon);
+
                 this.p1.playIdle();
                 this.p2.setAlpha(0);
 
@@ -173,6 +177,7 @@ export default class Game extends Phaser.Scene {
             this.opponentMax = this.opponentHP;
         
             this.events.emit(Text.EVENT_NEXT_STATE, win);
+            GameSave.IncRoundsPlayed();
             hideHP();
         }
         else {
@@ -198,6 +203,8 @@ export default class Game extends Phaser.Scene {
         updateRoundNumber(this.roundsWon + 1);
         updateHP(this.playerHP, this.opponentHP, this.opponentMax);
         showHP();
+
+        GameSave.SaveToLocalStorage();
     }
     
     tweenInSprite(sprite) {

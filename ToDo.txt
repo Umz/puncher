@@ -12,7 +12,7 @@
         Stop game flow
         Retry current round not restart
         HTML views Align and test
-
+        Show high score on Menu
     @Optionals
         [FX] Warp in FX
         [FX] Sparkle on Round 10+
@@ -20,16 +20,14 @@
         [Menu] Exit
         [Power Up] Sound Fx 
         [Toggle Sounds On/Off]
+        [HUD] PLayer names - use the prefix
     @ Complete the Gameplay First
         [Background with Graphics] (DEFER)
             - Platforms in the Sky
                 > BG platforms floating background 
             - Clouds and smoke or mist
                 > Floating independent clouds 
-                > Clouds in/out alpha
-        [Data Storage]
-            - High score
-    
+                > Clouds in/out alpha    
     @ Add loading, booting, transition screens
         - Pre game loaded boot screen (UG Logo)
     @ Add branding, polishing images and screens

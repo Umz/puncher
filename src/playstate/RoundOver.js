@@ -2,6 +2,7 @@ import Playstate from "../class/Playstate";
 import Text from "../common/Text";
 import Sfx from "../const/Sfx";
 import Dom from "../util/Dom";
+import GameSave from "../util/GameSave";
 import KeyControl from "../util/KeyControl";
 
 export default class Ready extends Playstate {
@@ -11,28 +12,7 @@ export default class Ready extends Playstate {
     }
 
     init(win) {
-
-        KeyControl.AddRightControl(this.scene, (event) => {
-            KeyControl.TraverseMenu(Text.CHOICE_SELECTED, 1);
-            this.playSound(Sfx.MENU_MOVE);
-        });
-        KeyControl.AddLeftControl(this.scene, (event) => {
-            KeyControl.TraverseMenu(Text.CHOICE_SELECTED, -1);
-            this.playSound(Sfx.MENU_MOVE);
-        });
-        KeyControl.AddActionControl(this.scene, (event) => {
-            KeyControl.SelectMenuItem(Text.CHOICE_SELECTED);
-            this.playSound(Sfx.MENU_CLICK);
-        });
-
-        Dom.AddClick(Text.CHOICE_LEFT, (event)=>{
-            this.reset();
-            this.fireEvent(Text.EVENT_NEXT_STATE);
-        });
-        Dom.AddClick(Text.CHOICE_RIGHT, (event)=>{
-            this.scene.exitToMenu();
-        });
-
+        
         if (win) {
             this.counter.setActive(true);
             this.counter.setMaxCount(3000);
@@ -40,6 +20,29 @@ export default class Ready extends Playstate {
             showFeedback();
         }
         else {
+
+            KeyControl.AddRightControl(this.scene, (event) => {
+                KeyControl.TraverseMenu(Text.CHOICE_SELECTED, 1);
+                this.playSound(Sfx.MENU_MOVE);
+            });
+            KeyControl.AddLeftControl(this.scene, (event) => {
+                KeyControl.TraverseMenu(Text.CHOICE_SELECTED, -1);
+                this.playSound(Sfx.MENU_MOVE);
+            });
+            KeyControl.AddActionControl(this.scene, (event) => {
+                KeyControl.SelectMenuItem(Text.CHOICE_SELECTED);
+                this.playSound(Sfx.MENU_CLICK);
+            });
+    
+            Dom.AddClick(Text.CHOICE_LEFT, (event)=>{
+                GameSave.IncRetries();
+                this.reset();
+                this.fireEvent(Text.EVENT_NEXT_STATE);
+            });
+            Dom.AddClick(Text.CHOICE_RIGHT, (event)=>{
+                this.scene.exitToMenu();
+            });
+
             showChoiceMenu();
             this.counter.setActive(false);
         }
