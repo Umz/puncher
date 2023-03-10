@@ -74,6 +74,9 @@ const Text = {
     TX_WIND: "wind-circle",
 
     SPR_TOLU: "tolu",
+    SPR_BLOCKY: "",
+    SPR_AKI: "aki",
+    SPR_FOREST: "forest",
 
     //  Emitters
 

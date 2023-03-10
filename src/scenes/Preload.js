@@ -27,11 +27,17 @@ export default class Preload extends Phaser.Scene {
     }
 
     createAnimations() {
-        let fighters = [
-            { key: Text.SPR_TOLU, frames: this.anims.generateFrameNames(Text.SHEET, { prefix: 'spr_tolu_idle', start:1, end: 4}), frameRate: 8, repeat: -1 },
-        ];
-        for (let ff of fighters)
-            this.anims.create(ff);
+        let sprites = [Text.SPR_TOLU, Text.SPR_FOREST, Text.SPR_AKI];
+        for (let sprite of sprites) {
+            let prefix = `spr_${sprite}_idle`;
+            let config = {
+                key: sprite,
+                frames: this.anims.generateFrameNames(Text.SHEET, { prefix: prefix, start:1, end: 4}),
+                frameRate: 8,
+                repeat: -1
+            }
+            this.anims.create(config);
+        }
     }
 
     createGraphics() {
