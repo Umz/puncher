@@ -93,6 +93,8 @@ const Text = {
 
     //  Sounds
 
+    MUS_FIGHT: "mus_fight.ogg",
+
     SND_MENU_MOVE: "menu_move.ogg",
     SND_MENU_CLICK: "menu_click.ogg",
     SND_MENU_PLAY: "menu_play.ogg",

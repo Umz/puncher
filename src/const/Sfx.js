@@ -19,6 +19,6 @@ const Sfx = {
 
     GAME_WARP: { key: Text.SND_GAME_WARP, config: {volume: 1} },
 
-    //MUS: Sfx.BGM_LEVEL, {volume: .3, loop:true, isMusic:true}
+    MUS_FIGHT: { key: Text.MUS_FIGHT, config: {volume: 1, music:true, loop:true} }
 }
 export default Sfx;
