@@ -66,6 +66,12 @@ export default class Fighter extends Phaser.Physics.Arcade.Sprite {
         this.x = this.startX;
     }
     
+    setRandomSprite() {
+        let opts = [Text.SPR_AKI, Text.SPR_FOREST];
+        let prefix = Phaser.Utils.Array.GetRandom(opts);
+        this.setSprite(prefix);
+    }
+
     setSprite(prefix) {
 
         this.prefix = prefix;
@@ -73,9 +79,9 @@ export default class Fighter extends Phaser.Physics.Arcade.Sprite {
         let frame = `spr_${prefix}_idle1`;
         let textureFrame = this.scene.textures.getFrame(Text.SHEET, frame);
 
-        this.sprite.setFrame(model.frame);
-        this.sprite.setSize(textureFrame.width, textureFrame.height);
-        this.sprite.refreshBody();
+        this.setFrame(frame);
+        this.setSize(textureFrame.width, textureFrame.height);
+        this.refreshBody();
     }
 
     get punchReadyFrame() { return `spr_${this.prefix}_attack1`; }

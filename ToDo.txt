@@ -10,13 +10,16 @@
         Hide both buttons after rounds
         Menu controls - pause, game-
         Stop game flow
+        Retry current round not restart
+        HTML views Align and test
 
     @Optionals
         [FX] Warp in FX
         [FX] Sparkle on Round 10+
         [FX] White outline 15+
         [Menu] Exit
-        [Power Up]
+        [Power Up] Sound Fx 
+        [Toggle Sounds On/Off]
     @ Complete the Gameplay First
         [Background with Graphics] (DEFER)
             - Platforms in the Sky
@@ -24,8 +27,6 @@
             - Clouds and smoke or mist
                 > Floating independent clouds 
                 > Clouds in/out alpha
-        [Sounds]
-            - Wind effect for the BG Sound
         [Graphics]
             - Add 7-13 sprites
         [Data Storage]

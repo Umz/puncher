@@ -48,11 +48,15 @@ export default class Game extends Phaser.Scene {
         let tc = platform.getTopCenter();
         let player = new Fighter(this, tc.x-16, tc.y, Text.SHEET, Text.SPR_TOLU);
         let opponent = new Fighter(this, tc.x+16, tc.y, Text.SHEET, Text.SPR_TOLU).setFlipX(true);
-        player.playIdle();
-        opponent.playIdle();
-
+        
         this.add.existing(player);
         this.add.existing(opponent);
+        this.physics.add.existing(player);
+        this.physics.add.existing(opponent);
+        
+        opponent.setRandomSprite();
+        player.playIdle();
+        opponent.playIdle();
 
         this.p1 = player;
         this.p2 = opponent;
@@ -70,6 +74,7 @@ export default class Game extends Phaser.Scene {
         this.state.init();
 
         showHP();
+        juke.play(Sfx.MUS_FIGHT);
 
         //  STATE Events
 
@@ -185,8 +190,8 @@ export default class Game extends Phaser.Scene {
         }
         
         if (this.p2.alpha === 0) {
-            // Choose a new Sprite
-            // Set
+            
+            this.p2.setRandomSprite();
             this.tweenInSprite(this.p2);
         }
 
@@ -204,6 +209,7 @@ export default class Game extends Phaser.Scene {
             ease: Phaser.Math.Easing.Circular.Out,
             onComplete: ()=>{
                 sprite.playIdle();
+                this.p2.setY(this.p1.getBottomCenter().y);
             }
         });
         this.juke.play(Sfx.GAME_WARP);
@@ -214,7 +220,12 @@ export default class Game extends Phaser.Scene {
         this.scene.launch(Text.MENU, {remove:true});
         this.scene.setVisible(false);
 
+        this.juke.stop(Sfx.MUS_FIGHT);
         this.juke.play(Sfx.MENU_CLOSE);
+    }
+
+    restartFromMenu() {
+        this.juke.play(Sfx.MUS_FIGHT);
     }
 }
 
