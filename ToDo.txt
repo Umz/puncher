@@ -4,12 +4,9 @@
 +Add the Menu and HUD/UI elements
 
     @ Fix
-        Speed increase manually
         Menu controls - pause, game-
         Stop game flow
         HTML views Align and test
-        Show high score on Menu
-        Version numver on home
     @Optionals
         [FX] Warp in FX
         [FX] Sparkle on Round 10+

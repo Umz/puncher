@@ -23,6 +23,10 @@ export default class GameSave {
         saveData.maxRound = Math.max(saveData.maxRound, num);
     }
 
+    static GetMaxRound() {
+        return saveData.maxRound;
+    }
+
     static IncPlayTime(delta) {
         saveData.playTime += Math.round(delta);
     }

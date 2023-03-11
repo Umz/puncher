@@ -1,6 +1,7 @@
 const Text = {
 
     SAVE_NAME: "PlatformPuncher_1.0",
+    VERSION_NAME: "1.0 [Proof]",
 
     //  HTML
 
@@ -11,6 +12,9 @@ const Text = {
     DOM_HUD: "hud-container",
     DOM_CHOICES: "select-container",
     DOM_CHOICES_BUTTONS: "select-choices",
+
+    DOM_SCORE: "menu-score",
+    DOM_VERSION: "menu-version",
 
     MENU_SELECTED: "menu-active",
     MENU_ITEMS: "menu-item",

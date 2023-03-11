@@ -2,6 +2,7 @@ import Phaser from "phaser";
 import Text from "../common/Text";
 import Sfx from "../const/Sfx";
 import Dom from "../util/Dom";
+import GameSave from "../util/GameSave";
 import Juke from "../util/Juke";
 import KeyControl from "../util/KeyControl";
 
@@ -14,6 +15,14 @@ export default class Menu extends Phaser.Scene {
     create () {
 
         let juke = new Juke(this);
+
+        //  Update Highscore
+        
+        let score = GameSave.GetMaxRound();
+        let scoreTxt = `Highscore [${score}]`;
+        let versionTxt = "Version " + Text.VERSION_NAME;
+        Dom.SetText(Text.DOM_SCORE, scoreTxt);
+        Dom.SetText(Text.DOM_VERSION, versionTxt);
 
         showMenu();
         //hideMenu();
