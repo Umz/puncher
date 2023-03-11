@@ -4,8 +4,6 @@
 +Add the Menu and HUD/UI elements
 
     @ Fix
-        Lives 4, 5
-        Hide both buttons after rounds
         Menu controls - pause, game-
         Stop game flow
         Retry current round not restart

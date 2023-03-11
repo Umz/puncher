@@ -28,6 +28,7 @@ export default class Game extends Phaser.Scene {
 
         this.roundsWon = 0;
         this.playerHP = 3;
+        this.playerMax = 3;
         this.opponentHP = 3;
         this.opponentMax = 3;
         this.stateIndex = 0;
@@ -150,7 +151,7 @@ export default class Game extends Phaser.Scene {
 
     checkRoundOver() {
 
-        updateHP(this.playerHP, this.opponentHP, this.opponentMax);
+        updateHP(this.playerHP, this.playerMax, this.opponentHP, this.opponentMax);
         
         if (this.playerHP <= 0 || this.opponentHP <= 0) {
 
@@ -172,7 +173,8 @@ export default class Game extends Phaser.Scene {
                 this.juke.play(Sfx.GAME_DIE5);
             }
 
-            this.playerHP = 3;
+            this.playerMax = (this.roundsWon >= 20) ? 5 : (this.roundsWon >= 10) ? 4 : 3;
+            this.playerHP = this.playerMax;
             this.opponentHP = 3 + this.roundsWon;
             this.opponentMax = this.opponentHP;
         
@@ -189,8 +191,13 @@ export default class Game extends Phaser.Scene {
 
         if (this.p1.alpha === 0) {
             this.roundsWon = 0;
+
+            this.playerHP = 3;
+            this.playerMax = this.playerHP;
+
             this.opponentHP = 3;
             this.opponentMax = this.opponentHP;
+
             this.tweenInSprite(this.p1);
         }
         
@@ -201,7 +208,7 @@ export default class Game extends Phaser.Scene {
         }
 
         updateRoundNumber(this.roundsWon + 1);
-        updateHP(this.playerHP, this.opponentHP, this.opponentMax);
+        updateHP(this.playerHP, this.playerMax, this.opponentHP, this.opponentMax);
         showHP();
 
         GameSave.SaveToLocalStorage();
@@ -250,8 +257,8 @@ function hideHP() {
     Dom.SetHidden(Text.HUD_ROUND);
 }
 
-function updateHP(playerHP, oppHP, oppMax) {
-    let playerPC = Math.round(playerHP / 3 * 100);
+function updateHP(playerHP, playerMax, oppHP, oppMax) {
+    let playerPC = Math.round(playerHP / playerMax * 100);
     let opponentPC = Math.round(oppHP / oppMax * 100);
     Dom.SetHP(Text.HUD_PLAYER_HP, playerPC);
     Dom.SetHP(Text.HUD_OPPONENT_HP, opponentPC);
