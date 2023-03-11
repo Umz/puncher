@@ -8,7 +8,6 @@ export default class GameSave {
     static SaveToLocalStorage() {
         let data = JSON.stringify(saveData);
         sessionStorage.setItem(Text.SAVE_NAME, data);
-        console.log(data);
     }
 
     static LoadFromLocalStorage() {

@@ -160,6 +160,7 @@ export default class Game extends Phaser.Scene {
                 
                 this.roundsWon ++;
                 GameSave.SetMaxRound(this.roundsWon);
+                this.state.increaseDifficulty();
 
                 this.p1.playIdle();
                 this.p2.setAlpha(0);

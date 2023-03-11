@@ -28,8 +28,6 @@ export default class Filling extends Playstate {
             this.buttonPress(LEFT);
         });
 
-        this.responseTime = Math.max(this.responseTime - 100, 200);
-        this.counter.setMaxCount(this.responseTime);
         this.lastButtons.length = 0;
         this.setNextButton();
     }
@@ -41,6 +39,12 @@ export default class Filling extends Playstate {
 
     resetCountToDefault() {
         this.responseTime = 2000;
+    }
+
+    increaseDifficulty() {
+        let reduction = 70;
+        this.responseTime = Math.max(this.responseTime - reduction, 350);
+        this.counter.setMaxCount(this.responseTime);
     }
 
     update(time, delta) {
