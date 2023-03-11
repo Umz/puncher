@@ -3,7 +3,6 @@ import Preload from './scenes/Preload';
 import Background from './scenes/Background';
 import Game from './scenes/Game';
 import Menu from './scenes/Menu';
-import Pause from './scenes/Pause';
 import Value from './common/Value';
 
 const width = innerWidth;
@@ -31,8 +30,7 @@ const config = {
         Preload,
         Background,
         Game,
-        Menu,
-        Pause
+        Menu
     ]
 };
 

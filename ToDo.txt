@@ -13,6 +13,7 @@
         [Power Up] Sound Fx 
         [Toggle Sounds On/Off]
         [HUD] PLayer names - use the prefix
+        [FX] Key flash when touched
     @ Complete the Gameplay First
         [Background with Graphics] (DEFER)
             - Platforms in the Sky
@@ -20,11 +21,9 @@
             - Clouds and smoke or mist
                 > Floating independent clouds 
                 > Clouds in/out alpha    
-    @ Map buttons and customise for TV remote control
-        [Back button]
     @ Add TV specific commands, back, etc.
         [Back button]
-            - Pause Menu Mid Game (Uses Dom on Pause)
+            - Pause Menu Mid Game (Back to Menu)
             - Exit the app
 # CREATE THE MARKETING
     @ HTML page

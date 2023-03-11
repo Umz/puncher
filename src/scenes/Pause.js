@@ -12,5 +12,4 @@ export default class Pause extends Phaser.Scene {
 
     update(time, delta) {
     }
-    
 }
