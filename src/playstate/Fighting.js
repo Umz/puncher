@@ -27,6 +27,10 @@ export default class Filling extends Playstate {
         KeyControl.AddLeftControl(this.scene, (event) => {
             this.buttonPress(LEFT);
         });
+        KeyControl.AddBackControl(this.scene, (event)=>{
+            hideArrows();
+            this.scene.forceDeath();
+        });
 
         this.lastButtons.length = 0;
         this.setNextButton();

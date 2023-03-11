@@ -78,18 +78,16 @@ export default class Menu extends Phaser.Scene {
             KeyControl.TraverseMenu(Text.MENU_SELECTED, -1);
             hidePopups();
         });
-        KeyControl.AddActionControl(this, (event) => {
+        KeyControl.AddActionControl(this, (event)=>{
             KeyControl.SelectMenuItem(Text.MENU_SELECTED);
         });
-
-        this.input.keyboard.on('keydown-BACKSPACE', backButton);
+        KeyControl.AddBackControl(this, (event)=>{
+            let activeElement = Dom.GetFirstFromClass(Text.MENU_SELECTED);
+            if (activeElement.id === Text.MENU_EXIT)
+                console.log('Exit');
+            setMenuItemSelected(Text.MENU_EXIT);
+        });
     }
-}
-
-function backButton(event) {
-    console.log('BS');
-    // Select exit
-    // If already selected, exit game
 }
 
 //  DOM Controls

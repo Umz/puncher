@@ -223,6 +223,11 @@ export default class Game extends Phaser.Scene {
         this.juke.play(Sfx.GAME_WARP);
     }
 
+    forceDeath() {
+        this.playerHP = 0;
+        this.events.emit(Text.EVENT_HIT);
+    }
+
     exitToMenu() {
 
         this.state.reset();

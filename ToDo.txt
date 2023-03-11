@@ -4,6 +4,7 @@
 +Add the Menu and HUD/UI elements
 +Add loading, booting, transition screens
 +Add branding, polishing images and screens
++Add TV specific commands, back, etc.
 
     @Optionals
         [FX] Warp in FX
@@ -21,10 +22,6 @@
             - Clouds and smoke or mist
                 > Floating independent clouds 
                 > Clouds in/out alpha    
-    @ Add TV specific commands, back, etc.
-        [Back button]
-            - Pause Menu Mid Game (Back to Menu)
-            - Exit the app
 # CREATE THE MARKETING
     @ HTML page
         [Meta]

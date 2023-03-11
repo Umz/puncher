@@ -36,6 +36,10 @@ export default class KeyControl {
         scene.input.keyboard.on('keydown-SPACE', fn);
     }
 
+    static AddBackControl(scene, fn) {
+        scene.input.keyboard.on('keydown-BACKSPACE', fn);
+    }
+
     static RemoveAllControls(scene) {
         scene.input.keyboard.off('keydown-LEFT');
         scene.input.keyboard.off('keydown-RIGHT');
@@ -48,6 +52,7 @@ export default class KeyControl {
         scene.input.keyboard.off('keydown-ENTER');
         scene.input.keyboard.off('keydown-FIVE');
         scene.input.keyboard.off('keydown-SPACEBAR');
+        scene.input.keyboard.off('keydown-BACKSPACE');
     }
 }
 
