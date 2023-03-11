@@ -2,6 +2,8 @@
 +Complete the HTML shell
 +Complete the JS shells
 +Add the Menu and HUD/UI elements
++Add loading, booting, transition screens
++Add branding, polishing images and screens
 
     @Optionals
         [FX] Warp in FX
@@ -18,10 +20,6 @@
             - Clouds and smoke or mist
                 > Floating independent clouds 
                 > Clouds in/out alpha    
-    @ Add loading, booting, transition screens
-        - Pre game loaded boot screen (UG Logo)
-    @ Add branding, polishing images and screens
-        - Add WebOS
     @ Map buttons and customise for TV remote control
         [Back button]
     @ Add TV specific commands, back, etc.

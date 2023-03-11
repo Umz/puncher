@@ -26,6 +26,37 @@
     margin: 5% 0;
 }
 
+/* Boot screen UG Logo */
+#boot-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    
+    background-color: #000;
+    z-index: 100;
+    pointer-events: none;
+}
+#boot-holder {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+}
+#boot-logo {
+    display: block;
+    max-width: 50%;
+    margin: auto;
+}
+
+.boot-fade-out {
+    animation: boot-fade-anim 2s ease-out 1s;
+    animation-fill-mode: forwards;
+}
+@keyframes boot-fade-anim {
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+}
+
 /* Game Logo */
 #logo-container {
     z-index: 5;

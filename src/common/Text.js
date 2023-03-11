@@ -10,11 +10,14 @@ const Text = {
     DOM_HOW: "how-container",
     DOM_CREDITS: "credits-container",
     DOM_HUD: "hud-container",
+    DOM_BOOT: "boot-container",
     DOM_CHOICES: "select-container",
     DOM_CHOICES_BUTTONS: "select-choices",
 
     DOM_SCORE: "menu-score",
     DOM_VERSION: "menu-version",
+
+    BOOT_CLASS: "boot-fade-out",
 
     MENU_SELECTED: "menu-active",
     MENU_ITEMS: "menu-item",
