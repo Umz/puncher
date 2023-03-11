@@ -174,9 +174,7 @@ export default class Game extends Phaser.Scene {
             }
 
             this.playerMax = (this.roundsWon >= 20) ? 5 : (this.roundsWon >= 10) ? 4 : 3;
-            this.playerHP = this.playerMax;
-            this.opponentHP = 3 + this.roundsWon;
-            this.opponentMax = this.opponentHP;
+            this.opponentMax = Math.min(3 + this.roundsWon, 10);
         
             this.events.emit(Text.EVENT_NEXT_STATE, win);
             GameSave.IncRoundsPlayed();
@@ -189,24 +187,18 @@ export default class Game extends Phaser.Scene {
 
     resetRound() {
 
-        if (this.p1.alpha === 0) {
-            this.roundsWon = 0;
-
-            this.playerHP = 3;
-            this.playerMax = this.playerHP;
-
-            this.opponentHP = 3;
-            this.opponentMax = this.opponentHP;
-
+        if (this.p1.alpha === 0) {    
             this.tweenInSprite(this.p1);
         }
         
         if (this.p2.alpha === 0) {
-            
             this.p2.setRandomSprite();
             this.tweenInSprite(this.p2);
         }
 
+        this.playerHP = this.playerMax;
+        this.opponentHP = this.opponentMax;
+        
         updateRoundNumber(this.roundsWon + 1);
         updateHP(this.playerHP, this.playerMax, this.opponentHP, this.opponentMax);
         showHP();
@@ -236,13 +228,21 @@ export default class Game extends Phaser.Scene {
         this.scene.launch(Text.MENU, {remove:true});
         this.scene.setVisible(false);
 
-        this.states[1].resetCountToDefault();
-
         this.juke.stop(Sfx.MUS_FIGHT);
         this.juke.play(Sfx.MENU_CLOSE);
     }
 
     restartFromMenu() {
+        
+        this.roundsWon = 0;
+        this.states[1].resetCountToDefault();
+
+        this.playerHP = 3;
+        this.playerMax = this.playerHP;
+
+        this.opponentHP = 3;
+        this.opponentMax = this.opponentHP;
+
         this.juke.play(Sfx.MUS_FIGHT);
     }
 }
