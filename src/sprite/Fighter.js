@@ -1,4 +1,5 @@
 import Text from '../common/Text';
+import Dom from "../util/Dom";
 
 export default class Fighter extends Phaser.Physics.Arcade.Sprite {
 
@@ -70,6 +71,7 @@ export default class Fighter extends Phaser.Physics.Arcade.Sprite {
         let opts = [Text.SPR_FOREST, Text.SPR_AKI, Text.SPR_SOLDIER, Text.SPR_SOLDIER_HG, Text.SPR_YELLOW, Text.SPR_BLOCKY, Text.SPR_SPY, Text.SPR_NINJA, Text.SPR_SAMURAI, Text.SPR_KNIFE];
         let prefix = Phaser.Utils.Array.GetRandom(opts);
         this.setSprite(prefix);
+        Dom.SetText(Text.HUD_OPP_NAME, prefix);
     }
 
     setSprite(prefix) {

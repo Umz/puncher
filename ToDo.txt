@@ -13,7 +13,6 @@
         [Menu] Exit
         [Power Up] Sound Fx 
         [Toggle Sounds On/Off]
-        [HUD] PLayer names - use the prefix
         [FX] Key flash when touched
     @ Complete the Gameplay First
         [Background with Graphics] (DEFER)

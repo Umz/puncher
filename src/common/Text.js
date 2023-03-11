@@ -48,6 +48,7 @@ const Text = {
     HUD_PLAYER_HP: "hp-player",
     HUD_OPPONENT_HP: "hp-opponent",
     HUD_ROUND: "hud-round",
+    HUD_OPP_NAME: "hud-opponent-name",
 
     HUD_READY: "hud-ready",
     HUD_FEEDBACK: "hud-feedback",
