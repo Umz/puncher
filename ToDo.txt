@@ -4,8 +4,6 @@
 +Add the Menu and HUD/UI elements
 
     @ Fix
-        Timing reset-
-        Menu Refactor to use KeyControl
         Lives 4, 5
         Hide both buttons after rounds
         Menu controls - pause, game-

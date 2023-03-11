@@ -13,7 +13,7 @@ export default class Filling extends Playstate {
         super(scene);
         
         this.counter.setRepeating(true);
-        this.responseTime = 3000;
+        this.responseTime = 2000;
 
         this.lastButtons = [3, 3, 3];
         this.nextButton = 1;
@@ -37,6 +37,10 @@ export default class Filling extends Playstate {
     reset() {
         super.reset();
         KeyControl.RemoveAllControls(this.scene);
+    }
+
+    resetCountToDefault() {
+        this.responseTime = 2000;
     }
 
     update(time, delta) {

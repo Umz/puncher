@@ -217,15 +217,19 @@ export default class Game extends Phaser.Scene {
             onComplete: ()=>{
                 sprite.playIdle();
                 this.p2.setY(this.p1.getBottomCenter().y);
+                this.p2.resetPosition();
             }
         });
         this.juke.play(Sfx.GAME_WARP);
     }
 
     exitToMenu() {
+
         this.state.reset();
         this.scene.launch(Text.MENU, {remove:true});
         this.scene.setVisible(false);
+
+        this.states[1].resetCountToDefault();
 
         this.juke.stop(Sfx.MUS_FIGHT);
         this.juke.play(Sfx.MENU_CLOSE);
