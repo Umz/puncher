@@ -6,7 +6,7 @@ export default class Juke {
 
     play(sfx) {
 
-        const max = 3;
+        const max = 5;
         let key = sfx.key;
         let config = sfx.config;
         

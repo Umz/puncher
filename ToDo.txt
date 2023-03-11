@@ -3,10 +3,6 @@
 +Complete the JS shells
 +Add the Menu and HUD/UI elements
 
-    @ Fix
-        Menu controls - pause, game-
-        Stop game flow
-        HTML views Align and test
     @Optionals
         [FX] Warp in FX
         [FX] Sparkle on Round 10+

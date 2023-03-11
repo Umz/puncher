@@ -6,7 +6,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    padding: 7% 5%;
+    padding: 3%;
 
     border-radius: 5px;
     border: 2px solid #3d1a23;
@@ -31,6 +31,11 @@
     z-index: 5;
 }
 #logo-holder {
+    position: absolute;
+    flex-direction: column;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     justify-content: center;
 }
 #logo-img {
@@ -45,8 +50,13 @@
     z-index: 7;
 }
 #menu-holder {
+
+    position: absolute;
     flex-direction: column;
-    transform: translate(0, 200%);
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
     text-align: center;
     text-transform: uppercase;
     text-shadow: 0px 2px 2px #000;
@@ -95,7 +105,7 @@
     visibility: hidden;
 }
 #credits-holder {
-    width: 640px;
+    width: 800px;
 }
 #credits-holder p {
     font-size: calc(.5em + 1vmin);
@@ -114,9 +124,9 @@
     
     max-width: 80%;
     margin: auto;
-    padding: 15% 0;
+    padding-top: 10%;
+    
     text-align: center;
-
     line-height: 150%;
     color: #3d1a23;
 }
@@ -131,7 +141,7 @@
 }
 
 #select-choices {
-    margin: 30% auto;
+    margin: 25% auto 0 auto;
     width: 250px;
 }
 .choice-active {
