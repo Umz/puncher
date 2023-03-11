@@ -87,6 +87,8 @@ const Text = {
     SPR_NINJA: "ninja",
     SPR_SAMURAI: "samurai",
 
+    SPR_KNIFE: "knife",
+
     //  Emitters
 
     EMIT_WIND: "wind-emitter",

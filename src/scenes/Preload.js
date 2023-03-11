@@ -14,8 +14,8 @@ export default class Preload extends Phaser.Scene {
     preload () {
         this.load.atlas(Text.SHEET, AtlasImg, AtlasJson);
         for (let [key, data] of Object.entries(Sfx))
-            this.load.audio(data.key, `./src/assets/sounds/${data.key}`);
-            //this.load.audio(data.key, `./sounds/${data.key}`);
+            //this.load.audio(data.key, `./src/assets/sounds/${data.key}`);
+            this.load.audio(data.key, `./sounds/${data.key}`);
     }
     
     create () {
@@ -30,7 +30,7 @@ export default class Preload extends Phaser.Scene {
     }
 
     createAnimations() {
-        let sprites = [Text.SPR_TOLU, Text.SPR_FOREST, Text.SPR_AKI, Text.SPR_SOLDIER, Text.SPR_SOLDIER_HG, Text.SPR_YELLOW, Text.SPR_BLOCKY, Text.SPR_SPY, Text.SPR_NINJA, Text.SPR_SAMURAI];
+        let sprites = [Text.SPR_TOLU, Text.SPR_FOREST, Text.SPR_AKI, Text.SPR_SOLDIER, Text.SPR_SOLDIER_HG, Text.SPR_YELLOW, Text.SPR_BLOCKY, Text.SPR_SPY, Text.SPR_NINJA, Text.SPR_SAMURAI, Text.SPR_KNIFE];
         for (let sprite of sprites) {
             let prefix = `spr_${sprite}_idle`;
             let config = {

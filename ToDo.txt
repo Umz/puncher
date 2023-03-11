@@ -13,6 +13,7 @@
         Retry current round not restart
         HTML views Align and test
         Show high score on Menu
+        Version numver on home
     @Optionals
         [FX] Warp in FX
         [FX] Sparkle on Round 10+
