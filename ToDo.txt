@@ -11,7 +11,7 @@
         [FX] Sparkle on Round 10+
         [FX] White outline 20+ And big sparkle
         [Menu] Exit
-        [Power Up] Sound Fx 
+        [Power Up] Sound Fx
         [Toggle Sounds On/Off]
         [FX] Key flash when touched
     @ Complete the Gameplay First
@@ -45,6 +45,9 @@
         - Smart TV, WebOS focus
 # PUBLISH THE GAME
     @ Put on TV
+        [Icon]
+            - TV Icons
+            - Screenshots for page
     @ Create a dedicated website for 1 year (ug/name) > pointer site
 # MARKETING
     @ Contacts
