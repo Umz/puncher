@@ -58,10 +58,12 @@ export default class Menu extends Phaser.Scene {
             showPopup(Text.DOM_CREDITS);
             juke.play(Sfx.MENU_CLICK);
         });
+        /*
         Dom.AddClick(Text.MENU_EXIT, ()=>{
             setMenuItemSelected(Text.MENU_EXIT);
             juke.play(Sfx.MENU_CLOSE);
         });
+        */
 
         Dom.AddClick(Text.DOM_HOW, hidePopups);
         Dom.AddClick(Text.DOM_CREDITS, hidePopups);
@@ -81,12 +83,14 @@ export default class Menu extends Phaser.Scene {
         KeyControl.AddActionControl(this, (event)=>{
             KeyControl.SelectMenuItem(Text.MENU_SELECTED);
         });
+        /*
         KeyControl.AddBackControl(this, (event)=>{
             let activeElement = Dom.GetFirstFromClass(Text.MENU_SELECTED);
             if (activeElement.id === Text.MENU_EXIT)
                 console.log('Exit');
             setMenuItemSelected(Text.MENU_EXIT);
         });
+        */
     }
 }
 
