@@ -15,8 +15,8 @@ export default class Preload extends Phaser.Scene {
     preload () {
         this.load.atlas(Text.SHEET, AtlasImg, AtlasJson);
         for (let [key, data] of Object.entries(Sfx))
-            this.load.audio(data.key, `./src/assets/sounds/${data.key}`);
-            //this.load.audio(data.key, `./sounds/${data.key}`);
+            //this.load.audio(data.key, `./src/assets/sounds/${data.key}`);
+            this.load.audio(data.key, `./sounds/${data.key}`);
     }
     
     create () {

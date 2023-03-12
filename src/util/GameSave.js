@@ -2,16 +2,17 @@ import SaveData from "../class/SaveData";
 import Text from "../common/Text";
 
 const saveData = new SaveData();
+const storage = localStorage;
 
 export default class GameSave {
 
     static SaveToLocalStorage() {
         let data = JSON.stringify(saveData);
-        sessionStorage.setItem(Text.SAVE_NAME, data);
+        storage.setItem(Text.SAVE_NAME, data);
     }
 
     static LoadFromLocalStorage() {
-        let rawString = sessionStorage.getItem(Text.SAVE_NAME);
+        let rawString = storage.getItem(Text.SAVE_NAME);
         let data = JSON.parse(rawString);
         if (data)
             Object.assign(saveData, data);
