@@ -1,6 +1,6 @@
 # Platform Punch Off (TV)
 
-Game description information
+Punch your opponent off the platform.
 
 ## Subtitle
 ### Another
