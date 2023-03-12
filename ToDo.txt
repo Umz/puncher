@@ -6,8 +6,6 @@
 +Add branding, polishing images and screens
 +Add TV specific commands, back, etc.
 
-    @Deployment Checklist
-        - Fonts (download and ship)
     @Optionals
         [FX] Warp in FX
         [FX] Sparkle on Round 10+
@@ -17,6 +15,7 @@
         [Toggle Sounds On/Off]
         [FX] Key flash when touched
         [Back] Handle Back button
+        [Fonts] Fonts (download and ship)
     @ Complete the Gameplay First
         [Background with Graphics] (DEFER)
             - Platforms in the Sky
