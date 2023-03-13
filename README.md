@@ -1,6 +1,8 @@
-# Platform Punch Off (TV)
+# Platform Puncher (TV)
 
 Punch your opponent off the platform.
+Go head to head in a series of 1v1 punch offs. Defeat every opponent to achieve the highest score possible.
+Use the forward and back buttons (or 4-6) to attack and defend against ever faster opponents.
 
 ## Subtitle
 ### Another

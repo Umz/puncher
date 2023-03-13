@@ -16,6 +16,9 @@
         [FX] Key flash when touched
         [Back] Handle Back button
         [Fonts] Fonts (download and ship)
+        [Data] Clear and reset data
+        [DB] Use IndexedDB instead of localStorage
+        [Versioning] Download Versions direct
     @ Complete the Gameplay First
         [Background with Graphics] (DEFER)
             - Platforms in the Sky
